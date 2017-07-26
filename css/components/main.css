@@ -1,0 +1,26 @@
+/*
+main page content
+*/
+
+.main {
+    background: url('../../img/background/main.jpg') 0 0 no-repeat;
+}
+
+.main__title {
+    font-family: 'gagalin';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 72px;
+    color: #f9b43b;
+    line-height: 85px;
+}
+
+.main__subtitle {
+    font-family: 'lifehack';
+    font-weight: 500;
+    font-style: normal;
+    font-size: 65px;
+    color: #fff;
+    line-height: 60px; 
+
+}

@@ -1,0 +1,32 @@
+
+/* Layout */
+
+@import "layout/normalize.css";
+@import "layout/base.css";
+
+/* Components */
+
+@import "components/header.css";
+@import "components/sidebar.css";
+@import "components/main.css";
+@import "components/burgers.css";
+@import "components/comments.css";
+@import "components/footer.css";
+@import "components/menu.css";
+@import "components/delivery.css";
+@import "components/strengths.css";
+@import "components/team.css";
+@import "components/map.css";
+
+
+
+
+
+
+
+
+
+
+
+
+
