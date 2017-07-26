@@ -2,10 +2,35 @@
 sidebar
 */
 
+.navigation {
+    position: fixed;
+    top: 90px;
+    right: 50px;
+    z-index: 200;
+}
+
+.navigation__link {
+    display: block;
+    border: 1px solid transparent;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: relative;
+    margin-bottom: 5px;
+}
 
 .navigation__item {
+    display: block;
     background-color: #fff;
     height: 6px;
     width: 6px;
     border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation__link--active {
+    border-color: #fff;
 }

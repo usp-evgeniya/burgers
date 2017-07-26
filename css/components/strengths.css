@@ -1,0 +1,49 @@
+/* strengths */
+
+.strengths {
+    background: url('../../img/background/strengths.jpg') 50% 50% no-repeat;
+    color: #2f3234;
+    background-size: cover;
+}
+
+.strengths__content {
+   text-align: center; 
+}
+
+.strengths__list {
+    margin-right: -15px;
+    padding-bottom: 180px;
+}
+
+.strengths__item {
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px;
+    vertical-align: top;
+}
+
+.strengths__title {
+    display: inline-block;
+    font-family: 'gagalin';
+    font-size: 72px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 65px;
+    margin: 0;
+
+}
+
+.strengths__img {
+    margin-bottom: 20px;
+}
+
+.strengths__name {
+    font-family: 'lifehack';
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.strengths__text {
+    line-height: 24px;
+}

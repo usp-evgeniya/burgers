@@ -1,3 +1,63 @@
 /*
 * comments page
 */
+
+
+.comments__item {
+    width: 25%;
+    min-width: 270px;
+    float: left;
+    overflow: hidden;
+    height: 350px;
+    position: relative;
+}
+
+.comments__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%)
+
+}
+
+.comments__name {
+    font-family: 'gagalin';
+    margin-bottom: 20px;
+
+}
+
+.comments__text {
+    margin-bottom: 20px;
+    font-family: 'ubuntu';
+    font-weight: 300;
+    line-height: 24px;
+}
+
+.comments__btn {
+    font-family: 'ubuntu';
+    font-size: 13px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 16px;
+    background-color: #2f3234;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.comments__textblock {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 47px 20px;
+}
+
+.comments__item:hover .comments__textblock{
+    opacity: 1;
+    background-color: rgba(20,20,20,0.7);
+}
+
+.comments__item:hover .comments__photo {
+    background-color: rgba(20,20,20,0.7);
+}
