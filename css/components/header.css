@@ -23,7 +23,7 @@ header
 
 }
 
-.header__item, .header__link, .header__link:before {
+.header__item, .header__link, .header__btn, .header__link:before {
     display: inline-block;
     font-family: 'ubuntu';
     font-size: 13px;
@@ -40,31 +40,32 @@ header
     background-color: #e45028;
     line-height: 30px;
     border-radius: 5px;
+    border: none;
 }
 
-.header__link {
+.header__item {
     margin-right: 12px;
 }
 
-.header__link:before {
+.header__item:before {
     content: "";
     display: inline-block;
     background-color: #fff;
     height: 4px;
     width: 4px;
     border-radius: 50%;
-    margin-right: 12spx;
+    margin-right: 12px;
 }
 
-.header__link:first-child:before {
+.header__item:first-child:before {
     display: none;
 }
 
-.header__link:last-child:before {
+.header__item:last-child:before {
     display: none;
 }
 
-.header__link:last-child {
+.header__item:last-child {
         margin-right: 0px;
 }
 
