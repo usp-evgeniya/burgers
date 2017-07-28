@@ -5,6 +5,7 @@ main page content
 .main {
     background: url('../../img/background/main.jpg') 50% 50% no-repeat;
     background-size: cover;
+    height: 100vh;
 }
 
 .main__content {

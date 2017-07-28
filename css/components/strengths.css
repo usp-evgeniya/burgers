@@ -4,6 +4,7 @@
     background: url('../../img/background/strengths.jpg') 50% 50% no-repeat;
     color: #2f3234;
     background-size: cover;
+    height: 100vh;
 }
 
 .strengths__content {
