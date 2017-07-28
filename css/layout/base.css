@@ -60,7 +60,7 @@ html, body {
 }
 
 body {
-    font-family: ubuntu;
+    font-family: ubuntu, Verdana, Arial, sans-serif;
     font-weight: 300;
     font-style: normal;
     line-height: 1.42;

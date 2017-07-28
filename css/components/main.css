@@ -14,7 +14,8 @@ main page content
 }
 
 .main__title {
-    font-family: gagalin;
+    font-family: gagalin, Verdana, Arial, sans-serif;
+    text-transform: uppercase;
     font-weight: normal;
     font-style: normal;
     font-size: 72px;
@@ -24,7 +25,7 @@ main page content
 }
 
 .main__subtitle {
-    font-family: lifehack;
+    font-family: lifehack, cursive;
     font-weight: 500;
     font-style: normal;
     font-size: 65px;

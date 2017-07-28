@@ -18,24 +18,23 @@
     left: 50%;
     transform: translate(-50%,-50%);
     width: 100%;
-
 }
 
 .comments__name {
-    font-family: gagalin;
+    font-family: gagalin, Verdana, Arial, sans-serif;
+    text-transform: uppercase;
     margin-bottom: 20px;
-
 }
 
 .comments__text {
     margin-bottom: 20px;
-    font-family: ubuntu;
+    font-family: ubuntu, Verdana, Arial, sans-serif;
     font-weight: 300;
     line-height: 24px;
 }
 
 .comments__btn {
-    font-family: ubuntu;
+    font-family: ubuntu, Verdana, Arial, sans-serif;
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;

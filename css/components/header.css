@@ -25,7 +25,7 @@ header
 
 .header__item, .header__link, .header__btn, .header__link:before {
     display: inline-block;
-    font-family: ubuntu;
+    font-family: ubuntu, Verdana, Arial, sans-serif;
     font-size: 13px;
     font-weight: 500;
     font-style: normal;
