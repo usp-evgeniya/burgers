@@ -9,7 +9,7 @@ sidebar
     z-index: 200;
 }
 
-.navigation__link {
+.navigation__item {
     display: block;
     border: 1px solid transparent;
     height: 16px;
@@ -19,7 +19,7 @@ sidebar
     margin-bottom: 5px;
 }
 
-.navigation__item {
+.navigation__link {
     display: block;
     background-color: #fff;
     height: 6px;
@@ -31,6 +31,6 @@ sidebar
     transform: translate(-50%, -50%);
 }
 
-.navigation__link--active {
+.navigation__item--active {
     border-color: #fff;
 }

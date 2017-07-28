@@ -25,7 +25,7 @@
 
 .strengths__title {
     display: inline-block;
-    font-family: 'gagalin';
+    font-family: gagalin;
     font-size: 72px;
     text-align: center;
     padding-top: 60px;
@@ -39,7 +39,7 @@
 }
 
 .strengths__name {
-    font-family: 'lifehack';
+    font-family: lifehack;
     font-size: 24px;
     margin-bottom: 15px;
 }

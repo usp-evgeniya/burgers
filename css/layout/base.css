@@ -11,42 +11,42 @@
 }
 
 @font-face {
-    font-family: 'lifehack';
+    font-family: lifehack;
     src: url('../../fonts/lifehack_medium-webfont.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'gagalin';
+    font-family: gagalin;
     src: url('../../fonts/gagalin-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu';
+    font-family: ubuntu;
     src: url('../../fonts/ubuntu-b-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu';
+    font-family: ubuntu;
     src: url('../../fonts/ubuntu-light-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu';
+    font-family: ubuntu;
     src: url('../../fonts/ubuntu-medium-webfont.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ubuntu';
+    font-family: ubuntu;
     src: url('../../fonts/ubuntu-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -60,7 +60,7 @@ html, body {
 }
 
 body {
-    font-family: 'ubuntu';
+    font-family: ubuntu;
     font-weight: 300;
     font-style: normal;
     line-height: 1.42;
