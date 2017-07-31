@@ -1,0 +1,32 @@
+/*
+sidebar
+*/
+
+.bullets {
+    position: fixed;
+    top: 90px;
+    right: 50px;
+    z-index: 200;
+
+    &__item {
+        display: block;
+        border: 1px solid transparent;
+        @include circle(16px, transparent);
+        position: relative;
+        margin-bottom: 5px;
+
+        &--active {
+            border-color: #fff;
+        }
+    }
+
+    &__link {
+        display: block;
+        @include circle(6px, $white);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}

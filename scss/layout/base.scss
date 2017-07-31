@@ -1,0 +1,42 @@
+/*base settings*/
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear:both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: ubuntu, Verdana, Arial, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.42;
+    font-size: 14px;
+    color: $white;
+    background-color:  $dark-grey; 
+    }
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}

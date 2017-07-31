@@ -1,18 +1,34 @@
 /*
-* comments page
+* comments section
 */
 .comments {
-    height: 100vh;
+    @extend %section;
+    width: 100%;
 }
 
+.comments__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .comments__item {
     width: 25%;
-    min-width: 270px;
-    float: left;
     overflow: hidden;
     height: 50vh;
+    min-height: 325px;
     position: relative;
+
+    &:hover .comments__textblock{
+        opacity: 1;
+        background-color: rgba(20,20,20,0.7);
+    }
+
+    &:hover .comments__photo {
+        background-color: rgba(20,20,20,0.7);
+    }
+
 }
 
 .comments__photo {
@@ -20,7 +36,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 100%;
+    min-width: 100%;
+    min-height: 100%;
     filter: grayscale(100%);
 }
 
@@ -38,15 +55,12 @@
 }
 
 .comments__btn {
-    font-family: ubuntu, Verdana, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    text-decoration: none;
-    color: #fff;
-    padding: 10px 16px;
-    background-color: #2f3234;
-    border-radius: 5px;
-    text-transform: uppercase;
+    @extend %btn;
+    background-color: $dark-grey;
+    
+    &:hover {
+        background-color: lighten($dark-grey, 10%);      
+    }
 }
 
 .comments__textblock {
@@ -57,11 +71,3 @@
     padding: 47px 20px;
 }
 
-.comments__item:hover .comments__textblock{
-    opacity: 1;
-    background-color: rgba(20,20,20,0.7);
-}
-
-.comments__item:hover .comments__photo {
-    background-color: rgba(20,20,20,0.7);
-}

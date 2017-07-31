@@ -2,26 +2,30 @@
 
 .strengths {
     background: url('../../img/background/strengths.jpg') 50% 50% no-repeat;
-    color: #2f3234;
+    color: $dark-grey;
     background-size: cover;
-    height: 100vh;
+    @extend %section;
 }
 
 .strengths__content {
-   text-align: center; 
+   text-align: center;
+   display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .strengths__list {
-    margin-right: -15px;
+    width: 100%;
     padding-bottom: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
 }
 
 .strengths__item {
     width: 300px;
-    display: inline-block;
-    text-align: center;
-    margin-right: 15px;
-    vertical-align: top;
 }
 
 .strengths__title {
@@ -30,10 +34,9 @@
     text-transform: uppercase;
     font-size: 72px;
     text-align: center;
-    padding-top: 60px;
+    padding-top: 55px;
     padding-bottom: 65px;
     margin: 0;
-
 }
 
 .strengths__img {

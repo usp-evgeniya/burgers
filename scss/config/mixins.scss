@@ -1,0 +1,32 @@
+%section {
+    height: 100vh;
+    min-height: 650px;
+    min-width: 940px;
+}
+
+%btn {
+    font-family: ubuntu, Verdana, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: $white;
+    padding: 3px 16px;
+    line-height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+
+}
+
+@function rem($px) {
+    @return $px / 16px+0rem;
+}
+
+@mixin circle($width, $color) {
+    width: $width;
+    height: $width;
+    border-radius: $width/2;
+    background-color: $color;
+}

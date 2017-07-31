@@ -1,14 +1,5 @@
-/*base settings*/
+/* fonts */
 
-.clearfix:after {
-    content: "";
-    display: block;
-    clear:both;
-}
-
-* {
-    box-sizing: border-box;
-}
 
 @font-face {
     font-family: lifehack;
@@ -50,33 +41,4 @@
     src: url('../../fonts/ubuntu-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}
-
-html, body {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    margin: 0px;
-}
-
-body {
-    font-family: ubuntu, Verdana, Arial, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    line-height: 1.42;
-    font-size: 14px;
-    color: #fff;
-    background-color:  #0f0f0f; 
-    }
-
-
-.container {
-    width: 940px;
-    margin: 0 auto;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
 }
