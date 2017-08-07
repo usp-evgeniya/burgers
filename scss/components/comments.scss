@@ -11,24 +11,20 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    align-content: stretch;
 }
 
 .comments__item {
-    width: 25%;
     overflow: hidden;
     height: 50vh;
-    min-height: 325px;
+    min-height: rem(325px);
+    width: 25%;
     position: relative;
 
     &:hover .comments__textblock{
         opacity: 1;
         background-color: rgba(20,20,20,0.7);
     }
-
-    &:hover .comments__photo {
-        background-color: rgba(20,20,20,0.7);
-    }
-
 }
 
 .comments__photo {
@@ -42,16 +38,15 @@
 }
 
 .comments__name {
-    font-family: gagalin, Verdana, Arial, sans-serif;
+    @include gagalin;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .comments__text {
-    margin-bottom: 20px;
-    font-family: ubuntu, Verdana, Arial, sans-serif;
-    font-weight: 300;
-    line-height: 24px;
+    margin-bottom: rem(20px);
+    @include ubuntu(300);
+    line-height: rem(24px);
 }
 
 .comments__btn {
@@ -68,6 +63,6 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    padding: 47px 20px;
+    padding: rem(47px) rem(20px);
 }
 

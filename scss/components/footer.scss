@@ -2,3 +2,56 @@
 footer
 */
 
+.footer {
+    background-color: #0f0f0f;
+
+
+        &__content {
+            display: flex;
+            justify-content: space-between;
+        }
+}
+
+.footer__contacts {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__address {
+    margin-bottom: 5px;
+}
+
+.footer__phone {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: $red;
+    @include ubuntu(700);
+
+    &-icon {
+        width: 13px;
+        height: 12px;
+        fill: $red;
+        margin-right: 8px;
+    }
+}
+
+.socials__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.socials__icon {
+    width:20px;
+    height: 20px;
+    fill: $white;
+    opacity: 0.3;
+    margin-left: 20px;
+
+    &:hover {
+        opacity: 1;
+    }
+
+}

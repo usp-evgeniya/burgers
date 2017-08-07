@@ -3,9 +3,7 @@ header
 */
 
 .header {
-    position: absolute;
-    top: 0;
-    width: 100%;
+    display: flex;
 
     &__content {
     display: flex;
@@ -16,9 +14,9 @@ header
 }
 
 .header__logo {
-    width: 92px;
-    height: 77px;
-    margin-top: 12px;
+    width: rem(92px);
+    height: rem(77px);
+    margin-top: rem(12px);
     margin-right: auto;
 }
 
@@ -27,16 +25,16 @@ header
 }
 
 .header__list {
-    padding-top: 28px;
-    padding-bottom: 28px;
+    padding-top: rem(28px);
+    padding-bottom: rem(28px);
+    display: flex;
+    align-items: center;
 
 }
 
 .header__link {
-    font-family: ubuntu, Verdana, Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 500;
-    font-style: normal;
+    @include ubuntu(500);
+    font-size: rem(13px);
     text-transform: uppercase;
     text-decoration: none;
     color: $white;
@@ -44,14 +42,14 @@ header
 }
 
 .header__item {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     
     &:before {
         content: "";
-        display: inline-block;
-        vertical-align: middle;
-        @include circle(4px, $white);
-        margin: 0 12px;
+        display: inline-flex;
+        @include circle(rem(4px), $white);
+        margin: 0 rem(12px);
     }
     &:first-child:before {
         display: none;
@@ -61,8 +59,7 @@ header
 
 .header__btn {
     @extend %btn;
-    display: inline-block;
-    vertical-align: middle;
+    display: inline-flex;
     background-color: $red;
     
     &:hover {

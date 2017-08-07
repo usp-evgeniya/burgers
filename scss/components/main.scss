@@ -13,33 +13,19 @@ first section content
 }
 
 .main__content {
-    padding-top: 75px;
-    padding-bottom: 100px;
+    padding-top: rem(75px);
+    padding-bottom: rem(100px);
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;   
 }
 
-.main__title {
-    font-family: gagalin, Verdana, Arial, sans-serif;
-    text-transform: uppercase;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 72px;
-    color: $yellow;
-    line-height: 85px;
-    margin-bottom: 18px;
-    display: block;
-}
-
 .main__subtitle {
-    font-family: lifehack, cursive;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 65px;
+    @include lifehack;
+    font-size: rem(65px);
     color: $white;
-    line-height: 60px; 
+    line-height: rem(60px); 
 }
 
 .main__img, .main__text {
@@ -48,23 +34,22 @@ first section content
 }
 
 .main__img {
-    margin-left: 0px;
-    margin-right: 7px;
+    margin-left: rem(0px);
+    margin-right: rem(7px);
 }
 
 .main__text {
-   /*padding-top: 53px;*/
    margin: 0;
    text-align: left;
-   margin-top: 70px;
-   margin-left: 7px;
+   margin-top: rem(70px);
+   margin-left: rem(7px);
 }
 
 .main__arrow {
     background: url('../../img/icon/arrow-scroll.svg') 0 0 no-repeat;
-    padding-bottom: 55px;
-    width: 29px;
-    height: 14px;
+    padding-bottom: rem(55px);
+    width: rem(29px);
+    height: rem(14px);
     border: none;
     cursor: pointer;
 }

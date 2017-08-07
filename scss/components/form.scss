@@ -1,0 +1,142 @@
+
+/*form*/
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.form__part {
+    width: 49%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: rem(13px);
+    flex: 1;
+}
+
+.form__item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-left: rem(20px);
+    min-width: rem(80px);
+
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.form__input, .form__input--textarea {
+    @include ubuntu(300);
+    font-size: rem(14px);
+    border-radius: rem(5px);
+    border: rem(1px) solid transparent;
+    border-color: #d1cfcb;
+    outline: none;
+    cursor: pointer;
+    padding: rem(10px);
+}
+
+.form__input--textarea {
+    resize: none;
+    height: rem(112px);
+    margin-bottom: rem(20px);
+}
+
+.form__caption {
+    margin-bottom: rem(5px);
+    @include ubuntu(300);
+    font-size: rem(14px);
+}
+
+.form__options {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: rem(20px);
+}
+
+
+
+.form__options-type {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+    margin-right: rem(20px);
+}
+
+.form__optons-radio {
+    display: none;
+}
+
+.form__optons-radio--fake {
+    @include circle (rem(15px),$white);
+    border: none;
+
+    position: relative;
+    cursor: pointer;
+    margin-right: rem(10px);
+}
+
+.form__optons-radio:checked + .form__optons-radio--fake::after {
+    content: "";
+    @include circle(rem(7px),$red);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+}
+
+.form__checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(20px);
+}
+
+.form__checkbox-visual {
+    display: none;
+}
+
+.form__checkbox-visual--fake {
+    display: inline-flex;
+    background-color: $white;
+    height: rem(15px);
+    width: rem(15px);
+    margin-right: rem(10px);
+    position: relative;
+}
+
+.form__checkbox-visual:checked + .form__checkbox-visual--fake:after {
+    content: "";
+    height: rem(9px);
+    width: rem(11px);
+    position: absolute;
+    background: url('../../img/icon/checkmark.png') 50% 50% no-repeat;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form__submit {
+    @extend %btn;
+
+    &--order {
+        background-color: $red;
+    }
+
+    &--clear {
+        background-color: transparent;
+        text-transform: none;
+        margin-left: rem(5px);
+    }
+
+}

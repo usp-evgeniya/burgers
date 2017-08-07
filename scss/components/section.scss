@@ -1,0 +1,33 @@
+.section__title {
+    display: inline-flex;
+    @include gagalin;
+    font-size: rem(72px);
+    margin: 0;
+
+    &--main {
+        line-height: rem(85px);
+        margin-bottom: rem(18px);
+        color: $yellow;
+    }
+
+    &--strengths {
+        text-align: center;
+        color: $dark-grey;
+        padding-top: rem(55px);
+        padding-bottom: rem(65px);
+    }
+
+    &--team {
+        color: $yellow;
+    }
+
+    &--menu {
+        padding-top: rem(80px);
+    }
+
+    &--delivery {
+        padding-top: rem(65px);
+        padding-bottom: rem(60px);
+        color: $yellow;
+    }
+}

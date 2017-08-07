@@ -13,8 +13,12 @@
 html, body {
     width: 100%;
     height: 100%;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
@@ -22,13 +26,18 @@ body {
     font-weight: 300;
     font-style: normal;
     line-height: 1.42;
-    font-size: 14px;
+    font-size: rem(14px);
     color: $white;
     background-color:  $dark-grey; 
     }
 
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 .container {
-    width: 940px;
+    width: rem(940px);
     margin: 0 auto;
     display: flex;
     justify-content: center;

@@ -17,7 +17,6 @@
 
 .strengths__list {
     width: 100%;
-    padding-bottom: 180px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -25,30 +24,19 @@
 }
 
 .strengths__item {
-    width: 300px;
-}
-
-.strengths__title {
-    display: inline-block;
-    font-family: gagalin, Verdana, Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 72px;
-    text-align: center;
-    padding-top: 55px;
-    padding-bottom: 65px;
-    margin: 0;
+    width: rem(300px);
 }
 
 .strengths__img {
-    margin-bottom: 20px;
+    margin-bottom: rem(20px);
 }
 
 .strengths__name {
-    font-family: lifehack, cursive;
-    font-size: 24px;
-    margin-bottom: 15px;
+    @include lifehack;
+    font-size: rem(24px);
+    margin-bottom: rem(15px);
 }
 
 .strengths__text {
-    line-height: 24px;
+    line-height: rem(24px);
 }

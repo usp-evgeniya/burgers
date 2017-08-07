@@ -1,2 +1,105 @@
 /* team */
 
+.team {
+    background: url('../../img/background/team.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    @extend %section;
+    position: relative;
+}
+
+.team__wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    right: 0;
+    background: rgba($dark-grey, 0.93);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team__content {
+    width: 80%;
+}
+
+.team__list {
+    padding-top: rem(30px);
+}
+
+.team__item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.team__details {
+    display: flex;
+    flex-direction: row;
+    height: 0;
+    overflow: hidden;
+}
+
+.team__photo {
+    @include circle (rem(100px), transparant);
+    overflow: hidden;
+    position: relative;
+    margin: 0 rem(20px);
+}
+
+.team__description {
+    width: rem(240px);
+    line-height: rem(24px);
+}
+
+.team__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.team__member {
+    @include gagalin;
+    margin: rem(20px) 0;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        content: "";
+        align-self: flex-end;
+        height: 0;
+        width: 0;
+        border-bottom: rem(6px) solid transparent;
+        border-top: rem(6px) solid $yellow;
+        border-right: rem(5px) solid transparent;
+        border-left: rem(5px) solid transparent;
+        margin-right: rem(10px);
+    }
+
+    &:hover {
+        color: $yellow;
+    }
+}
+
+.active {
+    & .team__member {
+        color: $yellow;
+
+        &:before {
+            transform: rotate(180deg);
+            align-self: flex-start;
+        }
+    }
+    
+    & .team__details {
+        height: auto;  
+    }
+}
+
+.team__position {
+    font-weight: bold;
+    margin-bottom: rem(20px);
+}
