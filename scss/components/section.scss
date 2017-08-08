@@ -1,5 +1,5 @@
 .section__title {
-    display: inline-flex;
+    display: inline-block;
     @include gagalin;
     font-size: rem(72px);
     margin: 0;
@@ -13,8 +13,12 @@
     &--strengths {
         text-align: center;
         color: $dark-grey;
-        padding-top: rem(55px);
-        padding-bottom: rem(65px);
+        margin-top: rem(55px);
+        margin-bottom: rem(65px);
+
+        @include tablets {
+            margin-top: rem(100px);
+        }
     }
 
     &--team {

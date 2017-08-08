@@ -17,13 +17,18 @@
 .comments__item {
     overflow: hidden;
     height: 50vh;
-    min-height: rem(325px);
+    /*min-height: rem(325px);*/
     width: 25%;
     position: relative;
 
     &:hover .comments__textblock{
         opacity: 1;
         background-color: rgba(20,20,20,0.7);
+    }
+
+    @include tablets {
+        width: 50%;
+        height: 25vh;
     }
 }
 
@@ -64,5 +69,11 @@
     height: 100%;
     position: absolute;
     padding: rem(47px) rem(20px);
+
+
+    @include tablets {
+        padding: rem(35px) rem(20px);
+        text-align: center;
+    }
 }
 

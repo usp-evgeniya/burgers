@@ -1,0 +1,46 @@
+/* hamburger-menu */
+
+.hamburger-menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: rem(20px);
+    width: rem(24px);
+    height: rem(24px);
+    display: none;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
+.hamburger-menu__bar {
+    background-color: $white;
+    width: rem(24px);
+    height: rem(4px);
+    border-radius: rem(4px);
+    margin-bottom: rem(4px);
+
+    &:before, &:after {
+    background-color: $white;
+    width: rem(24px);
+    height: rem(4px);
+    border-radius: rem(4px);
+    }
+
+    &:before, &:after {
+        content: "";
+        display: block;
+
+    }
+
+    &:before {
+        margin-top: rem(8px);
+    }
+
+    &:after {
+        margin-top: rem(4px);
+    }
+    
+}

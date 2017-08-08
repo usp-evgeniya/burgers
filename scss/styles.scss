@@ -2,6 +2,8 @@
 //* Config *//
 @import "config/variables";
 @import "config/mixins";
+@import "config/media";
+
 
 //* Layout *//
 @import "layout/fonts";
@@ -10,6 +12,7 @@
 
 //* Components *//
 @import "components/header";
+@import "components/hamburger-menu";
 @import "components/section";
 @import "components/bullets";
 @import "components/main";

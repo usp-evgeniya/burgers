@@ -3,7 +3,7 @@ first section content
 */
 
 .main {
-    background: url('../../img/background/main.jpg') 50% 50% no-repeat;
+    background: url('../img/background/main.jpg') 50% 50% no-repeat;
     background-size: cover;
     @extend %section;
     display: flex;
@@ -13,43 +13,57 @@ first section content
 }
 
 .main__content {
-    padding-top: rem(75px);
-    padding-bottom: rem(100px);
-    text-align: center;
+    /*padding-top: rem(75px);
+    padding-bottom: rem(100px);*/
     display: flex;
     justify-content: center;
-    align-items: center;   
-}
-
-.main__subtitle {
-    @include lifehack;
-    font-size: rem(65px);
-    color: $white;
-    line-height: rem(60px); 
-}
-
-.main__img, .main__text {
-    display: inline-block;
-    vertical-align: middle;
+    align-items: center; 
+    
+    @include tablets {
+        flex-direction: column;
+    }
 }
 
 .main__img {
-    margin-left: rem(0px);
+    margin-left: 0;
     margin-right: rem(7px);
 }
 
 .main__text {
    margin: 0;
-   text-align: left;
    margin-top: rem(70px);
    margin-left: rem(7px);
+   max-width: rem(400px);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+
+    @include tablets {
+        align-items: center;
+        margin-top: rem(30px);
+    }
+
 }
 
+.main__subtitle {
+    display: inline-block;
+    @include lifehack;
+    font-size: rem(65px);
+    color: $white;
+    line-height: rem(60px); 
+
+        @include tablets {
+        text-align: center;
+    }
+}
+
+
 .main__arrow {
-    background: url('../../img/icon/arrow-scroll.svg') 0 0 no-repeat;
+    background: url('../img/icon/arrow-scroll.svg') 0 0 no-repeat;
     padding-bottom: rem(55px);
     width: rem(29px);
     height: rem(14px);
     border: none;
     cursor: pointer;
+    margin-top: 100px;
 }

@@ -7,10 +7,12 @@
         <title>Mr. Burger - Магазин натуральных бургеров</title>
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/styles.css">
+        <script src="js/svg4everybody.min.js"></script>
+        <script>svg4everybody(); // run it now or whenever you are ready</script>
     </head>
     <body>
         <div class="wrapper">
-            <main class="content">
+            <div class="content">
                 <section class="section main">
                     <header class="header">
                         <div class="container header__content">
@@ -51,15 +53,20 @@
                             </nav>
                             <button class="header__btn" type="button">
                                 Заказать    
-                            </button>             
+                            </button>
+                            <div class="hamburger-menu">
+                            <a href="" class="hamburger-menu__link">
+                                <div class="hamburger-menu__bar"></div>
+                            </a>
+                            </div>             
                         </div>
                     </header>
                     <div class="container main__content">
                         <img src="img/photo/burger_main.png" alt="Burger" class="main__img">
-                        <h1 class="main__text">
+                        <div class="main__text">
                             <span class="section__title section__title--main">Мы делаем</span>
-                            <span class="main__subtitle">натуральные<br>бургеры</span>
-                        </h1>
+                            <span class="main__subtitle">натуральные бургеры</span>
+                        </div>
                     </div>
                     <button class="main__arrow" type="button"></button>
                 </section>
@@ -114,7 +121,7 @@
                                         </div>
                                         <div class="team__description">
                                             <div class="team__position">Оператор</div>
-                                            <div class="team__description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                            <div class="team__about">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                         </div>
                                     </div>
                                 </li>
@@ -126,7 +133,7 @@
                                         </div>
                                         <div class="team__description">
                                             <div class="team__position">Оператор</div>
-                                            <div class="team__description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                            <div class="team__about">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                         </div>
                                     </div>
                                 </li>
@@ -138,7 +145,7 @@
                                         </div>
                                         <div class="team__description">
                                             <div class="team__position">Оператор</div>
-                                            <div class="team__description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                            <div class="team__about">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                         </div>
                                     </div>
                                 </li>
@@ -150,7 +157,7 @@
                                         </div>
                                         <div class="team__description">
                                             <div class="team__position">Оператор</div>
-                                            <div class="team__description">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
+                                            <div class="team__about">С радостью поможет подобрать идеальный бургер и оформить заказ.</div>
                                         </div>
                                     </div>
                                 </li>
@@ -168,7 +175,7 @@
                     </div>
                     <ul class="menu__list">
                         <li class="menu__item">
-                            <div class="menu__type-cover menu__type-cover--meat">
+                            <div class="menu__type-cover menu__type-cover--diet">
                                 <div class="menu__type-title">
                                     Диетическое
                                 </div> 
@@ -190,7 +197,7 @@
                             </div>
                         </li>
                         <li class="menu__item">
-                            <div class="menu__type-cover menu__type-cover--diet">
+                            <div class="menu__type-cover menu__type-cover--meat">
                                 <div class="menu__type-title">
                                     Для мясоедов
                                 </div> 
@@ -380,13 +387,13 @@
 
                 </section>
 
-                <section class="section map">
+                <div class="section map">
                     <div class="map__interactive">
                         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa41b928413397969ab5f3c07374ee99570232b1797b9d1ca42c9d41f7c377a35&amp;width=100%25&amp;height=100vh&amp;lang=ru_RU&amp;scroll=true"></script>                
                     </div>
-                </section>
+                </div>
 
-            </main>
+            </div>
            
         </div>
 

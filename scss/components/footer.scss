@@ -18,7 +18,7 @@ footer
 }
 
 .footer__address {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 }
 
 .footer__phone {
@@ -29,10 +29,10 @@ footer
     @include ubuntu(700);
 
     &-icon {
-        width: 13px;
-        height: 12px;
+        width: rem(13px);
+        height: rem(12px);
         fill: $red;
-        margin-right: 8px;
+        margin-right: rem(8px);
     }
 }
 
@@ -40,15 +40,15 @@ footer
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 20px 0;
+    padding: rem(20px) 0;
 }
 
 .socials__icon {
-    width:20px;
-    height: 20px;
+    width:rem(20px);
+    height: rem(20px);
     fill: $white;
     opacity: 0.3;
-    margin-left: 20px;
+    margin-left: rem(20px);
 
     &:hover {
         opacity: 1;

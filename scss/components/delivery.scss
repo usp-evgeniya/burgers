@@ -1,7 +1,7 @@
 /*delivery*/
 
 .delivery {
-    background: url('../../img/background/delivery.jpg') 50% 50% no-repeat;
+    background: url('../img/background/delivery.jpg') 50% 50% no-repeat;
     background-size: cover;
     @extend %section;
     align-items: center;
@@ -10,5 +10,7 @@
 .delivery__content {
     display: flex;
     flex-direction: column;
+
+
 }
 

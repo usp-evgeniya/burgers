@@ -3,7 +3,7 @@
 */
 
 .menu {
-    background: url('../../img/background/menu.jpg') 50% 50% no-repeat;
+    background: url('../img/background/menu.jpg') 50% 50% no-repeat;
     background-size: cover;
     @extend %section;
     position: relative;
@@ -25,7 +25,11 @@
     display: flex;
     flex-direction: row-reverse;
     height: 100%;
-    width: 70%;
+    max-width: 65%;
+
+    @include tablets {
+        max-width: 100%;
+    }
 }
 
 .menu__item {
@@ -48,17 +52,17 @@
     position: relative;
 
     &--meat {
-        background: url('../../img/background/menu_meat.jpg') 50% 50% no-repeat;
+        background: url('../img/background/menu_meat.jpg') 50% 50% no-repeat;
         background-size: cover;
     }
 
     &--veg {
-        background: url('../../img/background/menu_vegetarian.jpg') 90% 50% no-repeat;
+        background: url('../img/background/menu_vegetarian.jpg') 90% 50% no-repeat;
         background-size: cover;
     }
 
     &--diet {
-        background: url('../../img/background/menu_diet.jpg') 100% 50% no-repeat;
+        background: url('../img/background/menu_diet.jpg') 100% 50% no-repeat;
         background-size: cover;
     }
 }
@@ -81,6 +85,12 @@
     position: absolute;
     text-align: center;
     margin: auto;
+
+        @include tablets {
+        text-align: left;
+        width: 90vh;
+    }
+
 }
 
 .menu__description {
@@ -90,7 +100,7 @@
 }
 
 .active .menu__description{
-    width: rem(540px);
+    width: 100%;
     padding: rem(60px) rem(35px);
     
     & p {
