@@ -3,7 +3,6 @@
 .team {
     background: url('../img/background/team.jpg') 50% 50% no-repeat;
     background-size: cover;
-    @extend %section;
     position: relative;
 }
 
@@ -16,7 +15,7 @@
     background: rgba($dark-grey, 0.93);
     display: flex;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
 
     @include tablets {
         width: 100%;
@@ -36,7 +35,7 @@
 }
 
 .team__list {
-    padding-top: rem(30px);
+    padding-top: rem(50px);
 
 }
 
@@ -92,7 +91,7 @@
 
 .team__member {
     @include gagalin;
-    margin: rem(20px) 0;
+    margin: rem(15px) 0;
     display: flex;
     align-items: center;
 
@@ -127,6 +126,7 @@
     & .team__member {
         color: $yellow;
 
+
         &:before {
             transform: rotate(180deg);
             align-self: flex-start;
@@ -140,12 +140,18 @@
     
     & .team__details {
         height: auto;  
+        margin-bottom: rem(20px);
+
+        @include tablets {
+            margin-bottom: rem(15px);
+        }
+
     }
 }
 
 .team__position {
     font-weight: bold;
-    margin-bottom: rem(20px);
+    margin-bottom: rem(15px);
 
 }
 

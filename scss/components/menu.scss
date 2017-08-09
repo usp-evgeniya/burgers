@@ -5,7 +5,6 @@
 .menu {
     background: url('../img/background/menu.jpg') 50% 50% no-repeat;
     background-size: cover;
-    @extend %section;
     position: relative;
 
 }

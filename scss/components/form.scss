@@ -10,7 +10,6 @@
     flex-wrap: wrap;
 
      @include tablets {
-        align-items: center;
         justify-content: center;
     }
 }
@@ -23,6 +22,11 @@
     @include tablets {
         width: 65%;
     }
+
+    @include phones {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 .form__row {
@@ -34,16 +38,29 @@
 .form__item {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     flex: 1;
     margin-left: rem(20px);
-    min-width: rem(80px);
+    min-width: rem(70px);
+
+    @include phones {
+        margin-left: rem(10px);
+    }
 
     &:first-child {
         margin-left: 0;
     }
+
+    &--floor {
+
+        @include phones {
+            display: none;
+        }
+    }
+
 }
 
-.form__input, .form__input--textarea {
+.form__input {
     @include ubuntu(300);
     font-size: rem(14px);
     border-radius: rem(5px);
@@ -52,27 +69,41 @@
     outline: none;
     cursor: pointer;
     padding: rem(10px);
+
+    &--textarea {
+        resize: none;
+        height: rem(112px);
+        margin-bottom: rem(20px);
+
+        @include phones {
+            margin-bottom: rem(40px);
+        }
+
+    }
+
 }
 
-.form__input--textarea {
-    resize: none;
-    height: rem(112px);
-    margin-bottom: rem(20px);
-}
 
 .form__caption {
     margin-bottom: rem(5px);
     @include ubuntu(300);
     font-size: rem(14px);
+
+    @include tablets {
+        text-align: left;
+    }
 }
 
 .form__options {
     display: flex;
     flex-direction: row;
     margin-bottom: rem(20px);
+
+    @include phones {
+        align-self: center;
+        margin-bottom: rem(30px);
+    }
 }
-
-
 
 .form__options-type {
     display: flex;
@@ -86,7 +117,7 @@
     display: none;
 }
 
-.form__optons-radio--fake {
+.form__optons-fake {
     @include circle (rem(15px),$white);
     border: none;
 
@@ -95,7 +126,7 @@
     margin-right: rem(10px);
 }
 
-.form__optons-radio:checked + .form__optons-radio--fake::after {
+.form__optons-radio:checked + .form__optons-fake::after {
     content: "";
     @include circle(rem(7px),$red);
     position: absolute;
@@ -109,13 +140,21 @@
     display: flex;
     align-items: center;
     margin-bottom: rem(20px);
+
+    @include tablets {
+            margin-bottom: rem(40px);
+        }
+
+    @include phones {
+        align-self: center;
+    }
 }
 
 .form__checkbox-visual {
     display: none;
 }
 
-.form__checkbox-visual--fake {
+.form__checkbox-fake {
     display: inline-flex;
     background-color: $white;
     height: rem(15px);
@@ -124,7 +163,7 @@
     position: relative;
 }
 
-.form__checkbox-visual:checked + .form__checkbox-visual--fake:after {
+.form__checkbox-visual:checked + .form__checkbox-fake:after {
     content: "";
     height: rem(9px);
     width: rem(11px);

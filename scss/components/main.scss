@@ -5,7 +5,6 @@ first section content
 .main {
     background: url('../img/background/main.jpg') 50% 50% no-repeat;
     background-size: cover;
-    @extend %section;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,20 +12,38 @@ first section content
 }
 
 .main__content {
-    /*padding-top: rem(75px);
-    padding-bottom: rem(100px);*/
     display: flex;
     justify-content: center;
     align-items: center; 
     
     @include tablets {
         flex-direction: column;
+        margin-top: rem(80px);
     }
 }
 
-.main__img {
+.main__picture {
     margin-left: 0;
     margin-right: rem(7px);
+    position: relative;
+    width: rem(453px);
+    height: rem(419px);
+
+    @include phones {
+        max-width: rem(366px);
+        max-height: rem(343px);
+        margin-top: rem(30px);
+    }
+
+}
+
+.main__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .main__text {
@@ -52,9 +69,15 @@ first section content
     color: $white;
     line-height: rem(60px); 
 
-        @include tablets {
+    @include tablets {
         text-align: center;
     }
+
+    @include phones {
+        font-size: rem(54px);
+    }
+
+
 }
 
 
@@ -65,5 +88,5 @@ first section content
     height: rem(14px);
     border: none;
     cursor: pointer;
-    margin-top: 100px;
+    margin-top: rem(50px);
 }

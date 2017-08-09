@@ -1,0 +1,28 @@
+
+.socials__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: rem(20px) 0;
+
+}
+
+.socials__icon {
+    width:rem(20px);
+    height: rem(20px);
+    fill: $white;
+    opacity: 0.3;
+    margin-left: rem(20px);
+
+    /* Почему если убирать так margin, у всех элементов он убирается?
+    &:first-child {
+        margin-left: rem(0px);
+    }
+
+    */
+
+    &:hover {
+        opacity: 1;
+    }
+
+}

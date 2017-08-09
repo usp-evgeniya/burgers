@@ -2,7 +2,6 @@
 * comments section
 */
 .comments {
-    @extend %section;
     width: 100%;
 }
 
@@ -40,18 +39,27 @@
     min-width: 100%;
     min-height: 100%;
     filter: grayscale(100%);
+
 }
 
 .comments__name {
     @include gagalin;
     text-transform: uppercase;
     margin-bottom: rem(20px);
+
+    @include phones {
+        font-size: rem(24px);
+    }
 }
 
 .comments__text {
     margin-bottom: rem(20px);
     @include ubuntu(300);
     line-height: rem(24px);
+
+    @include phones {
+        display: none;
+    }
 }
 
 .comments__btn {

@@ -1,11 +1,11 @@
 /* hamburger-menu */
 
-.hamburger-menu__link {
+.hamburger-menu {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin-left: rem(20px);
+    margin-left: rem(30px);
     width: rem(24px);
     height: rem(24px);
     display: none;
@@ -13,6 +13,11 @@
     @include tablets {
         display: flex;
     }
+
+    @include tablets {
+        margin-right: rem(10px);
+    }
+
 }
 
 .hamburger-menu__bar {

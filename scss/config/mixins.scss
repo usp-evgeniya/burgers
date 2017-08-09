@@ -24,7 +24,7 @@
 }
 
 @mixin gagalin {
-    font-family: gagalin, Verdana, Arial, sans-serif;
+    font-family: gagalin, cursive;
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
@@ -44,8 +44,7 @@
 }
 
 %section {
-    height: 100vh;
-    min-height: rem(650px);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }

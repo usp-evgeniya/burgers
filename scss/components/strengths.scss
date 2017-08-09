@@ -4,7 +4,6 @@
     background: url('../img/background/strengths.jpg') 50% 50% no-repeat;
     color: $dark-grey;
     background-size: cover;
-    @extend %section;
 }
 
 .strengths__content {
@@ -21,14 +20,58 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @include phones {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 .strengths__item {
-    width: rem(300px);
+    max-width: rem(300px);
+    margin: 0 rem(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    @include phones {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: rem(30px);
+        max-width: rem(460px);
+    }
 }
 
 .strengths__img {
+    width: rem(120px);
+    height: rem(120px);
     margin-bottom: rem(20px);
+    position: relative;
+
+    @include phones {
+        margin-right: rem(10px);
+    }
+}
+
+.strengths__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.strengths__description {
+
+        @include phones {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: rem(320px);
+        text-align: left;
+    }
 }
 
 .strengths__name {

@@ -13,56 +13,57 @@
     <body>
         <div class="wrapper">
             <div class="content">
+                <header class="header">
+                    <div class="container header__content">
+                        <img src="img/logo/logo.svg" alt="Mr. Burger" class="header__logo">
+                        <nav class="header__nav">
+                            <ul class="header__list">
+                                <li class="header__item">
+                                    <a href="" class="header__link">
+                                        О нас
+                                    </a>                            
+                                </li>
+                                <li class="header__item">
+                                    <a href="" class="header__link">
+                                        Бургеры
+                                    </a>                            
+                                </li>
+                                <li class="header__item">
+                                    <a href="" class="header__link">
+                                        Команда
+                                    </a>                            
+                                </li>
+                                <li class="header__item">
+                                    <a href="" class="header__link">
+                                        Меню
+                                    </a>                            
+                                </li>
+                                <li class="header__item">
+                                    <a href="" class="header__link">
+                                        Отзывы
+                                    </a>                            
+                                </li>
+                                <li class="header__item">
+                                    <a href="" class="header__link">
+                                        Контакты
+                                    </a>                            
+                                </li>
+                            </ul>
+                        </nav>
+                        <button class="header__btn" type="button">
+                            Заказать    
+                        </button>
+                        <div class="hamburger-menu">
+                            <div class="hamburger-menu__bar"></div>
+                        </div>             
+                    </div>
+                </header>
+
                 <section class="section main">
-                    <header class="header">
-                        <div class="container header__content">
-                            <img src="img/logo/logo.svg" alt="Mr. Burger" class="header__logo">
-                            <nav class="header__nav">
-                                <ul class="header__list">
-                                    <li class="header__item">
-                                        <a href="" class="header__link">
-                                            О нас
-                                        </a>                            
-                                    </li>
-                                    <li class="header__item">
-                                        <a href="" class="header__link">
-                                            Бургеры
-                                        </a>                            
-                                    </li>
-                                    <li class="header__item">
-                                        <a href="" class="header__link">
-                                            Команда
-                                        </a>                            
-                                    </li>
-                                    <li class="header__item">
-                                        <a href="" class="header__link">
-                                            Меню
-                                        </a>                            
-                                    </li>
-                                    <li class="header__item">
-                                        <a href="" class="header__link">
-                                            Отзывы
-                                        </a>                            
-                                    </li>
-                                    <li class="header__item">
-                                        <a href="" class="header__link">
-                                            Контакты
-                                        </a>                            
-                                    </li>
-                                </ul>
-                            </nav>
-                            <button class="header__btn" type="button">
-                                Заказать    
-                            </button>
-                            <div class="hamburger-menu">
-                            <a href="" class="hamburger-menu__link">
-                                <div class="hamburger-menu__bar"></div>
-                            </a>
-                            </div>             
-                        </div>
-                    </header>
                     <div class="container main__content">
-                        <img src="img/photo/burger_main.png" alt="Burger" class="main__img">
+                        <div class="main__picture">
+                            <img src="img/photo/burger_main.png" alt="Burger" class="main__img">
+                        </div>
                         <div class="main__text">
                             <span class="section__title section__title--main">Мы делаем</span>
                             <span class="main__subtitle">натуральные бургеры</span>
@@ -78,30 +79,42 @@
                         </h2>
                         <ul class="strengths__list">
                             <li class="strengths__item">
-                                <img src="img/icon/strengths/meat.svg" alt="" class="strengths__img">
-                                <div class="strengths__name">
-                                    100% свежее мясо
+                                <div class="strengths__img">
+                                    <img src="img/icon/strengths/meat.svg" alt="" class="strengths__icon">
                                 </div>
-                                <div class="strengths__text">
-                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
-                                </div>
-                            </li>
-                            <li class="strengths__item">
-                                <img src="img/icon/strengths/hand.svg" alt="" class="strengths__img">
-                                <div class="strengths__name">
-                                    Ручная  сборка
-                                </div>
-                                <div class="strengths__text">
-                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                <div class="strengths__description">
+                                    <div class="strengths__name">
+                                        100% свежее мясо
+                                    </div>
+                                    <div class="strengths__text">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.
+                                    </div>
                                 </div>
                             </li>
                             <li class="strengths__item">
-                                <img src="img/icon/strengths/natural.svg" alt="" class="strengths__img">
-                                <div class="strengths__name">
-                                    Натуральные ингредиенты
+                                <div class="strengths__img">
+                                    <img src="img/icon/strengths/hand.svg" alt="" class="strengths__icon">
                                 </div>
-                                <div class="strengths__text">
-                                    Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                <div class="strengths__description">
+                                    <div class="strengths__name">
+                                        Ручная  сборка
+                                    </div>
+                                    <div class="strengths__text">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.
+                                    </div>
+                                </div>                                
+                            </li>
+                            <li class="strengths__item">
+                                <div class="strengths__img">
+                                    <img src="img/icon/strengths/natural.svg" alt="" class="strengths__icon">
+                                </div>
+                                <div class="strengths__description">
+                                    <div class="strengths__name">
+                                        Натуральные ингредиенты
+                                    </div>
+                                    <div class="strengths__text">
+                                        Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -343,7 +356,7 @@
                                         </span>
                                         <input type="number" class="form__input">
                                     </label>
-                                    <label class="form__item">
+                                    <label class="form__item form__item--floor">
                                         <span class="form__caption">
                                             Этаж
                                         </span>
@@ -358,23 +371,23 @@
                                     <span class="form__caption">
                                         Комментарий
                                     </span>
-                                    <textarea type="text" class="form__input--textarea"></textarea>
+                                    <textarea type="text" class="form__input form__input--textarea"></textarea>
                                 </label>
                                 <div class="form__options">
                                     <label class="form__options-type">
                                         <input type="radio" name="payment" class="form__optons-radio">
-                                        <span class="form__optons-radio--fake"></span>
+                                        <span class="form__optons-fake"></span>
                                         <span class="form__options-name">Потребуется сдача</span>
                                     </label>
                                     <label class="form__options-type">
                                         <input type="radio" name="payment" class="form__optons-radio" checked>
-                                        <span class="form__optons-radio--fake"></span>
+                                        <span class="form__optons-fake"></span>
                                         <span class="form__options-name">Оплата по карте</span>
                                     </label>
                                 </div>
                                 <label class="form__checkbox">
                                     <input type="checkbox" name="payment" class="form__checkbox-visual" checked>
-                                    <span class="form__checkbox-visual--fake"></span>
+                                    <span class="form__checkbox-fake"></span>
                                     <span class="form__checkbox-name">Не перезванивать</span> 
                                 </label>
                                 <div class="form__btns">
