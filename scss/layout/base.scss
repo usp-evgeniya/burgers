@@ -20,6 +20,10 @@ html, body {
 html {
     font-size: 16px;
 
+    @include phones-small {
+        font-size: 14px;
+    }
+
 }
 
 body {
@@ -39,7 +43,7 @@ body {
 
 .container {
     max-width: rem(940px);
-    min-width: rem(320px);
+    min-width: rem(300px);
     width: 95%;
     margin: 0 auto;
     display: flex;

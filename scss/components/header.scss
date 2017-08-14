@@ -21,11 +21,33 @@ header
     height: rem(77px);
     margin-top: rem(12px);
     margin-right: auto;
+
+    @include tablets {
+        z-index: 400;
+    }
 }
 
 .header__nav {
     margin-right: rem(15px);
-   
+
+    @include tablets {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $dark-grey;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 300;
+        margin-right: 0;
+
+        display: none;
+    }
 }
 
 .header__list {
@@ -35,7 +57,8 @@ header
     align-items: center;
 
     @include tablets {
-        display: none;
+        flex-direction: column;
+
     }
 
 }
@@ -47,18 +70,36 @@ header
     text-decoration: none;
     color: $white;
     vertical-align: middle;
+
+    @include tablets {
+        font-size: rem(24px);
+    }    
+
 }
 
 .header__item {
     display: inline-flex;
     align-items: center;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     
     &:before {
         content: "";
         display: inline-flex;
         @include circle(rem(4px), $white);
         margin: 0 rem(12px);
+
+        @include tablets {
+            margin: rem(20px) 0;
+            
+        }
+
     }
+
     &:first-child:before {
         display: none;
     }

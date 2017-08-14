@@ -41,6 +41,11 @@
         margin-bottom: rem(30px);
         max-width: rem(460px);
     }
+
+    @include phones-small {
+        margin-bottom: rem(20px);
+        align-items: flex-start;
+    }
 }
 
 .strengths__img {
@@ -51,6 +56,12 @@
 
     @include phones {
         margin-right: rem(10px);
+    }
+
+    @include phones-small {
+        margin-right: rem(10px);
+        width: rem(80px);
+        height: rem(80px);
     }
 }
 

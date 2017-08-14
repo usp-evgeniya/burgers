@@ -26,13 +26,21 @@ first section content
     margin-left: 0;
     margin-right: rem(7px);
     position: relative;
-    width: rem(453px);
-    height: rem(419px);
+    width: 50%;
+    min-height: rem(420px);
+
+    @include tablets {
+        width: 100%;
+    }
 
     @include phones {
-        max-width: rem(366px);
-        max-height: rem(343px);
+        min-height: rem(343px);
         margin-top: rem(30px);
+    }
+
+    @include phones-small {
+        min-height: rem(280px);
+        margin-top: rem(0px);
     }
 
 }
@@ -50,14 +58,23 @@ first section content
    margin: 0;
    margin-top: rem(70px);
    margin-left: rem(7px);
-   max-width: rem(400px);
+   width: 50%;
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
 
     @include tablets {
+        width: 80%;
         align-items: center;
         margin-top: rem(30px);
+    }
+
+    @include phones {
+        width: 100%;
+    }
+
+    @include phones-small {
+        margin-top: rem(10px);
     }
 
 }
@@ -89,4 +106,8 @@ first section content
     border: none;
     cursor: pointer;
     margin-top: rem(50px);
+
+    @include phones-small {
+        margin-top: rem(10px);
+    }
 }

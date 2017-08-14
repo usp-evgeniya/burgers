@@ -1,51 +1,17 @@
 /* hamburger-menu */
 
 .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     margin-left: rem(30px);
     width: rem(24px);
     height: rem(24px);
     display: none;
+    background: url('../img/icon/hamburger-menu.svg') 50% 50% no-repeat;
+
 
     @include tablets {
         display: flex;
-    }
-
-    @include tablets {
         margin-right: rem(10px);
-    }
-
-}
-
-.hamburger-menu__bar {
-    background-color: $white;
-    width: rem(24px);
-    height: rem(4px);
-    border-radius: rem(4px);
-    margin-bottom: rem(4px);
-
-    &:before, &:after {
-    background-color: $white;
-    width: rem(24px);
-    height: rem(4px);
-    border-radius: rem(4px);
-    }
-
-    &:before, &:after {
-        content: "";
-        display: block;
-
-    }
-
-    &:before {
-        margin-top: rem(8px);
-    }
-
-    &:after {
-        margin-top: rem(4px);
-    }
+        z-index: 400;
     
+    }
 }

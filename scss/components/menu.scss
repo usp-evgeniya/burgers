@@ -64,6 +64,15 @@
         background: url('../img/background/menu_diet.jpg') 100% 50% no-repeat;
         background-size: cover;
     }
+
+    @include phones {
+        width: rem(70px);
+    }
+
+    @include phones-small {
+        width: rem(50px);
+        font-size: rem(30px);
+    }
 }
 
 .menu__type-cover:before {
@@ -85,7 +94,7 @@
     text-align: center;
     margin: auto;
 
-        @include tablets {
+    @include tablets {
         text-align: left;
         width: 90vh;
     }

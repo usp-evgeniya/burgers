@@ -83,5 +83,9 @@
         padding: rem(35px) rem(20px);
         text-align: center;
     }
+
+    @include phones-small {
+        padding: rem(15px) rem(10px);
+    }
 }
 

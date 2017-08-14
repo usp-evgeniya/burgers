@@ -1,2 +1,179 @@
 /* Burgers */
 
+.burgers {
+  background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+  background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    
+
+}
+
+.burgers__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+
+    @include tablets {
+        flex-direction: column;
+    }
+
+}
+
+.burgers__picture {
+    width: 50%;
+    position: relative;
+    min-height: rem(329px);
+
+    @include tablets {
+        width: 100%;
+        margin-bottom: rem(30px);
+    }
+
+    @include phones {
+        width: 90%;
+        margin-top: rem(70px);
+        min-height: rem(250px);
+    }
+
+    @include phones-small {
+        width: 100%;
+        margin-bottom: rem(10px);
+    }
+
+}
+
+.burgers__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+}
+
+
+.burgers__textblock {
+    width: 50%;
+
+    @include tablets {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.burgers__text {
+    display: flex;
+    line-height: rem(24px);
+}
+
+.burgers__order {
+    margin-bottom: rem(20px);
+}
+
+.burgers__price {
+    display: inline-flex;
+    @include gagalin;
+    font-size: rem(72px);
+    color: $red;
+
+    @include phones {
+        font-size: rem(50px);
+    }
+
+    &--currency {
+        font-size: rem(30px);
+        margin-left: rem(5px);
+
+        @include phones {
+            font-size: rem(24px);
+        }
+
+    }
+}
+
+.burgers__btn {
+    display: inline-flex;
+    @extend %btn;
+    background-color: $red;
+    margin-left: rem(20px);
+}
+
+
+.burgers__calories {
+    background: url('../img/icon/kkal.svg') 50% 0% no-repeat;
+    background-size: contain;
+    position: absolute;
+    left: 0;
+    bottom: rem(90px);
+    width: rem(60px);
+    height: rem(80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0.5;
+
+    @include tablets {
+        bottom: initial;
+        left: initial;
+        top: rem(130px);
+        right: 15%;
+    }
+
+    @include phones {
+        top: rem(50px);
+        right: 0;
+    }
+}
+
+.burgers__calories-caption {
+    @include gagalin;
+    font-size: rem(20px);
+
+    &--text {
+        margin-top: rem(5px);
+        font-size: rem(14px);
+    }
+}
+
+
+
+
+.burgers__control {
+    background: url('../img/icon/arrow-scroll.svg') 50% 50% no-repeat;
+    background-size: contain;
+    width: rem(29px);
+    height: rem(14px);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+
+    &--back {
+        left: 3%;
+        top: 49%;
+        transform: translate(0%,-50%) rotate(90deg);
+    }
+
+    &--next {
+        right: 3%;
+        top: 49%;
+        transform: translate(0%,-50%) rotate(-90deg);
+    }
+}
+

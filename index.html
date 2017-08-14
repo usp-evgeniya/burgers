@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/svg4everybody.min.js"></script>
         <script>svg4everybody(); // run it now or whenever you are ready</script>
+        <script src="js/jquery-3.2.1.min.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -54,7 +55,6 @@
                             Заказать    
                         </button>
                         <div class="hamburger-menu">
-                            <div class="hamburger-menu__bar"></div>
                         </div>             
                     </div>
                 </header>
@@ -120,6 +120,43 @@
                         </ul>
                     </div>
                 </section>
+
+                <section class="section burgers">
+                    <div class="burgers__content container">
+                        <div class="burgers__picture">
+                            <img src="img/photo/burger_burgers.png" alt="Burger" class="burgers__img">
+                        </div>
+                        <div class="burgers__textblock">
+                            <span class="section__title section__title--burgers">Dark Beef Burger</span>
+                            <span class="burgers__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</span>
+                            <div class="burgers__order">
+                                <span class="burgers__price">500</span>
+                                <span class="burgers__price burgers__price--currency">рублей</span>
+                                <button class="burgers__btn" type="button">Заказать</button>
+                            </div>
+                        </div>
+                        <div class="burgers__ingredients ingredients">
+                            <div class="ingredients__menu">
+                                <div class="ingredients__caption">Состав</div>
+
+                            </div>
+                            
+                            <table class="ingredients__table">
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+
+                        </div>
+                        <div class="burgers__calories">
+                            <div class="burgers__calories-caption">1200</div>
+                            <div class="burgers__calories-caption burgers__calories-caption--text">ккал</div>
+                        </div>
+
+                    </div>
+                    <button class="burgers__control burgers__control--back" type="button"></button>
+                    <button class="burgers__control burgers__control--next" type="button"></button>
+                </section>   
 
                 <section class="section team">
                     <div class="team__wrapper">
@@ -334,7 +371,7 @@
                                         <span class="form__caption">
                                             Улица
                                         </span>
-                                        <input type="tel" class="form__input">
+                                        <input type="text" class="form__input">
                                     </label>
                                 </div>
                                 <div class="form__row">
@@ -498,6 +535,43 @@
                 </li>
             </ul>
         </div> 
+
+        <script>
+            $(document).ready(function () {
+
+                var hamburgerMenu = $('.hamburger-menu')
+                $(hamburgerMenu).on('click', function (e) {
+                    e.preventDefault();
+                    $(hamburgerMenu).toggleClass('open');
+                    var open = $(hamburgerMenu).hasClass('open');
+
+                    if (open) {
+                        $('.header__nav').css('display', 'flex');
+                        $(hamburgerMenu).css({
+                            background: "url('../img/icon/close.svg') 50% 50% no-repeat",
+                            opacity: '0.7'
+                        });
+                        $('body').css({
+                            height: '100vh',
+                            overflow: 'hidden'
+                        });
+                    } else {
+                        $('.header__nav').css('display', 'none');
+                        $(hamburgerMenu).css({
+                            background: "url('../img/icon/hamburger-menu.svg') 50% 50% no-repeat",
+                            opacity: '1'
+                        });
+                        $('body').css({
+                            height: '100%',
+                            overflow: 'initial'
+                        });
+
+                    }
+                })
+
+            })
+
+        </script>
 
     </body>
 </html>
