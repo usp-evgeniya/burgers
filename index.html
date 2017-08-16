@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/styles.css">
         <script src="js/svg4everybody.min.js"></script>
         <script>svg4everybody(); // run it now or whenever you are ready</script>
-        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
         <div class="wrapper">
@@ -69,7 +69,11 @@
                             <span class="main__subtitle">натуральные бургеры</span>
                         </div>
                     </div>
-                    <button class="main__arrow" type="button"></button>
+                    <button class="main__arrow" type="button">
+                        <svg class="main__arrow-icon">
+                            <use xlink:href="img/icon/sprite.svg#arrow-scroll"></use>
+                        </svg>                    
+                    </button>
                 </section>
 
                 <section class="section strengths">
@@ -138,12 +142,86 @@
                         <div class="burgers__ingredients ingredients">
                             <div class="ingredients__menu">
                                 <div class="ingredients__caption">Состав</div>
-
                             </div>
                             
                             <table class="ingredients__table">
                                 <tr>
-                                    <td></td>
+                                    <td>
+                                        <svg class="ingredients__icon ingredients__icon--beef">
+                                            <use xlink:href="img/icon/sprite.svg#beef"></use>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        Говядина
+                                    </td>
+                                    <td>
+                                        300 г
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <svg class="ingredients__icon ingredients__icon--buns">
+                                            <use xlink:href="img/icon/sprite.svg#buns"></use>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        Булочки
+                                    </td>
+                                    <td>
+                                        100 г
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <svg class="ingredients__icon ingredients__icon--salad">
+                                            <use xlink:href="img/icon/sprite.svg#salad"></use>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        Зелень
+                                    </td>
+                                    <td>
+                                        70 г
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <svg class="ingredients__icon ingredients__icon--sauce">
+                                            <use xlink:href="img/icon/sprite.svg#sauce"></use>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        Соус
+                                    </td>
+                                    <td>
+                                        150 г
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <svg class="ingredients__icon ingredients__icon--cucumber">
+                                            <use xlink:href="img/icon/sprite.svg#cucumber"></use>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        Овощи
+                                    </td>
+                                    <td>
+                                        200 г
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <svg class="ingredients__icon ingredients__icon--cheese">
+                                            <use xlink:href="img/icon/sprite.svg#cheese"></use>
+                                        </svg>
+                                    </td>
+                                    <td>
+                                        Сыр
+                                    </td>
+                                    <td>
+                                        80 г
+                                    </td>
                                 </tr>
                             </table>
 
@@ -163,7 +241,7 @@
                         <div class="team__content">
                             <h2 class="section__title section__title--team">Команда</h2>
                             <ul class="team__list team__accordeon">
-                                <li class="team__item">
+                                <li class="team__item active">
                                     <div class="team__member">Дэниэл Редклиф</div>
                                     <div class="team__details">
                                         <div class="team__photo">
@@ -175,7 +253,7 @@
                                         </div>
                                     </div>
                                 </li>
-                                <li class="team__item active">
+                                <li class="team__item">
                                     <div class="team__member">Ричард Джеймс</div>
                                     <div class="team__details">
                                         <div class="team__photo">
@@ -224,7 +302,7 @@
                         </h2>
                     </div>
                     <ul class="menu__list">
-                        <li class="menu__item">
+                        <li class="menu__item active">
                             <div class="menu__type-cover menu__type-cover--diet">
                                 <div class="menu__type-title">
                                     Диетическое
@@ -536,42 +614,7 @@
             </ul>
         </div> 
 
-        <script>
-            $(document).ready(function () {
-
-                var hamburgerMenu = $('.hamburger-menu')
-                $(hamburgerMenu).on('click', function (e) {
-                    e.preventDefault();
-                    $(hamburgerMenu).toggleClass('open');
-                    var open = $(hamburgerMenu).hasClass('open');
-
-                    if (open) {
-                        $('.header__nav').css('display', 'flex');
-                        $(hamburgerMenu).css({
-                            background: "url('../img/icon/close.svg') 50% 50% no-repeat",
-                            opacity: '0.7'
-                        });
-                        $('body').css({
-                            height: '100vh',
-                            overflow: 'hidden'
-                        });
-                    } else {
-                        $('.header__nav').css('display', 'none');
-                        $(hamburgerMenu).css({
-                            background: "url('../img/icon/hamburger-menu.svg') 50% 50% no-repeat",
-                            opacity: '1'
-                        });
-                        $('body').css({
-                            height: '100%',
-                            overflow: 'initial'
-                        });
-
-                    }
-                })
-
-            })
-
-        </script>
+        <script src="js/main.js"></script>
 
     </body>
 </html>

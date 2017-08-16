@@ -54,7 +54,8 @@
 .team__details {
     display: flex;
     flex-direction: row;
-    height: 0;
+    height: 0rem;
+    transition: height 0.5s;
     overflow: hidden;
 
     @include tablets {
@@ -96,6 +97,8 @@
     margin: rem(15px) 0;
     display: flex;
     align-items: center;
+    transition: color 0.5s;
+    cursor: pointer;
 
     &:before {
         content: "";
@@ -141,8 +144,9 @@
     }
     
     & .team__details {
-        height: auto;  
+        height: rem(106px);  
         margin-bottom: rem(20px);
+        transition: height 0.5s;
 
         @include tablets {
             margin-bottom: rem(15px);

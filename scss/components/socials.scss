@@ -24,6 +24,8 @@
     fill: $white;
     opacity: 0.3;
     
+    transition: opacity 0.5s;
+
     &:hover {
         opacity: 1;
     }

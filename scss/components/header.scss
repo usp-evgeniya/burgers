@@ -35,6 +35,8 @@ header
         display: flex;
         justify-content: center;
         align-items: center;
+
+
         background-color: $dark-grey;
         position: absolute;
         width: 100vw;
@@ -51,6 +53,7 @@ header
 }
 
 .header__list {
+
     padding-top: rem(28px);
     padding-bottom: rem(28px);
     display: flex;
@@ -58,7 +61,13 @@ header
 
     @include tablets {
         flex-direction: column;
-
+        position: absolute;
+        height: rem(480px);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
     }
 
 }
@@ -70,6 +79,14 @@ header
     text-decoration: none;
     color: $white;
     vertical-align: middle;
+
+    
+    transition: color 0.5s;
+
+    &:hover {
+        color: $yellow;
+    }
+
 
     @include tablets {
         font-size: rem(24px);
@@ -111,8 +128,5 @@ header
     display: inline-flex;
     background-color: $red;
     
-    &:hover {
-        background-color: darken($red, 10%);
-        
-    }
+
 }
