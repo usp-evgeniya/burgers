@@ -54,9 +54,10 @@
 .team__details {
     display: flex;
     flex-direction: row;
-    height: 0rem;
-    transition: height 0.5s;
+    /*height: 0;
+    transition: height 0.5s;*/
     overflow: hidden;
+    display: none;
 
     @include tablets {
         flex-direction: column;    
@@ -144,9 +145,10 @@
     }
     
     & .team__details {
-        height: rem(106px);  
+       /* height: auto;  */
         margin-bottom: rem(20px);
-        transition: height 0.5s;
+        /*transition: height 0.5s;*/
+        display: flex;
 
         @include tablets {
             margin-bottom: rem(15px);
