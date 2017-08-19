@@ -152,8 +152,27 @@
     }
 }
 
+.owl-prev, .owl-next {
+    position: absolute;
+    background: url('../img/icon/arrow-scroll.svg') 50% 50% no-repeat !important;
+    background-size: contain;
+    width: rem(29px);
+    height: rem(14px);
+    top: 49%;
+}
 
+.owl-prev {
+    left: 1%;
+    transform: translate(0%,-50%) rotate(90deg);
+}
 
+.owl-next {
+    right: 1%;
+    transform: translate(0%,-50%) rotate(-90deg);
+    
+}
+
+/*
 
 .burgers__control {
     background: url('../img/icon/arrow-scroll.svg') 50% 50% no-repeat;
@@ -163,6 +182,7 @@
     border: none;
     cursor: pointer;
     position: absolute;
+    z-index: 300;
 
     &--back {
         left: 3%;
@@ -177,3 +197,4 @@
     }
 }
 
+*/

@@ -40,8 +40,9 @@
     min-height: 100%;
     filter: grayscale(100%);
 
-    @include phones {
+    @include tablets {
         width: 50%;
+        object-fit: cover;
     }
 
 }
@@ -71,7 +72,7 @@
     background-color: $dark-grey;
     
     &:hover {
-        background-color: lighten($dark-grey, 10%);      
+        background-color: darken($dark-grey, 10%);      
     }
 }
 

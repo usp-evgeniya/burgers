@@ -12,7 +12,7 @@
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.header__btn, .burgers__btn, .comments__btn, .form__submit {
+.header__btn, .burgers__btn, .comments__btn, .form__submit, .modal__btn {
   display: inline-block;
   font-family: ubuntu, Verdana, Arial, sans-serif;
   font-size: 0.8125rem;
@@ -29,7 +29,7 @@
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s; }
-  .header__btn:hover, .burgers__btn:hover, .comments__btn:hover, .form__submit:hover {
+  .header__btn:hover, .burgers__btn:hover, .comments__btn:hover, .form__submit:hover, .modal__btn:hover {
     background-color: #c13c18; }
 
 /* fonts */
@@ -81,7 +81,7 @@
 
 html, body {
   width: 100%;
-  min-height: 100%;
+  height: 100%;
   padding: 0;
   margin: 0; }
 
@@ -107,7 +107,8 @@ body.open {
 
 .wrapper {
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  /*height: 100%;*/ }
 
 .container {
   max-width: 58.75rem;
@@ -305,11 +306,9 @@ header
 
 .hamburger-menu.open {
   background: url("../img/icon/close.svg") 50% 50% no-repeat;
-  opacity: 0.7; }
-
-body.open {
-  height: 100vh;
-  overflow: hidden; }
+  opacity: 0.7;
+  width: 0.9375rem;
+  height: 0.9375rem; }
 
 .section__title {
   display: inline-block;
@@ -771,27 +770,52 @@ first section content
     margin-top: 0.3125rem;
     font-size: 0.875rem; }
 
-.burgers__control {
-  background: url("../img/icon/arrow-scroll.svg") 50% 50% no-repeat;
+.owl-prev, .owl-next {
+  position: absolute;
+  background: url("../img/icon/arrow-scroll.svg") 50% 50% no-repeat !important;
   background-size: contain;
   width: 1.8125rem;
   height: 0.875rem;
-  border: none;
-  cursor: pointer;
-  position: absolute; }
-  .burgers__control--back {
-    left: 3%;
-    top: 49%;
-    -webkit-transform: translate(0%, -50%) rotate(90deg);
-    -ms-transform: translate(0%, -50%) rotate(90deg);
-    transform: translate(0%, -50%) rotate(90deg); }
-  .burgers__control--next {
-    right: 3%;
-    top: 49%;
-    -webkit-transform: translate(0%, -50%) rotate(-90deg);
-    -ms-transform: translate(0%, -50%) rotate(-90deg);
-    transform: translate(0%, -50%) rotate(-90deg); }
+  top: 49%; }
 
+.owl-prev {
+  left: 1%;
+  -webkit-transform: translate(0%, -50%) rotate(90deg);
+  -ms-transform: translate(0%, -50%) rotate(90deg);
+  transform: translate(0%, -50%) rotate(90deg); }
+
+.owl-next {
+  right: 1%;
+  -webkit-transform: translate(0%, -50%) rotate(-90deg);
+  -ms-transform: translate(0%, -50%) rotate(-90deg);
+  transform: translate(0%, -50%) rotate(-90deg); }
+
+/*
+
+.burgers__control {
+    background: url('../img/icon/arrow-scroll.svg') 50% 50% no-repeat;
+    background-size: contain;
+    width: rem(29px);
+    height: rem(14px);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 300;
+
+    &--back {
+        left: 3%;
+        top: 49%;
+        transform: translate(0%,-50%) rotate(90deg);
+    }
+
+    &--next {
+        right: 3%;
+        top: 49%;
+        transform: translate(0%,-50%) rotate(-90deg);
+    }
+}
+
+*/
 .ingredients {
   position: absolute;
   top: 5.625rem;
@@ -953,9 +977,11 @@ first section content
   min-height: 100%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%); }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 768px) {
     .comments__photo {
-      width: 50%; } }
+      width: 50%;
+      -o-object-fit: cover;
+      object-fit: cover; } }
 
 .comments__name {
   font-family: gagalin, cursive;
@@ -981,7 +1007,7 @@ first section content
 .comments__btn {
   background-color: #2f3234; }
   .comments__btn:hover {
-    background-color: #474c4f; }
+    background-color: #171819; }
 
 .comments__textblock {
   opacity: 0;
@@ -1524,6 +1550,8 @@ footer
   background-color: transparent;
   text-transform: none;
   margin-left: 0.3125rem; }
+  .form__submit--clear:hover {
+    background-color: #171819; }
 
 /* strengths */
 .strengths {
@@ -1880,11 +1908,86 @@ footer
 
 /*map*/
 .map {
-  -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
+  width: 100%;
+  position: relative; }
+
+.map__interactive {
   width: 100%;
   height: 100vh; }
+
+.modal {
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 1, 0.5);
+  min-width: 9.375rem;
+  padding: 1.25rem;
+  z-index: 300;
+  display: none;
+  text-align: center;
+  max-width: 200px; }
+  .modal__text {
+    display: inline-block;
+    color: #2f3234;
+    margin-bottom: 0.9375rem; }
+  .modal__btn {
+    display: inline-block;
+    background-color: #e45028; }
+
+.popup {
+  display: none; }
+
+.comments__popup {
+  position: absolute; }
+
+.popup {
+  border-radius: 5px;
+  background-color: #fff;
+  min-width: 20%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1.875rem 1.25rem;
+  z-index: 300;
+  position: relative;
+  max-width: 29.375rem;
+  display: none; }
+  .popup__title {
+    font-family: gagalin, cursive;
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #2f3234;
+    margin-bottom: 0.9375rem; }
+  .popup__text {
+    color: #2f3234; }
+    .popup__text p {
+      margin: 0;
+      line-height: 1.5rem; }
+  .popup__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+    background: url("../img/icon/close_red.svg") 50% 50% no-repeat;
+    opacity: 0.7;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    cursor: pointer;
+    -webkit-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+    border: none; }
+    .popup__close:hover {
+      opacity: 1; }
 
 /*# sourceMappingURL=styles.css.map */

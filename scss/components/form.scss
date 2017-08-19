@@ -193,6 +193,10 @@
         background-color: transparent;
         text-transform: none;
         margin-left: rem(5px);
+
+        &:hover {
+            background-color: darken($dark-grey, 10%);
+        }
     }
 
 }

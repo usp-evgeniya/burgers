@@ -64,13 +64,132 @@ $(document).ready(function () {
         console.log(target);
         console.log(marker);            
 
+
+
         /*
         $('html, body').animate({
             scrollTop : $('target').offset().top
                 
-        }, 2000);
+        }, 1000);
 */
         })
     })
 
+    $(function(){
+        $(".owl-carousel").owlCarousel({
+            items: 1,
+            dots: false,
+            nav: true,
+            loop: true,
+            navText: []
+        }
+        );
+    })
+
+
+
+    $(function(){
+
+        ymaps.ready(init);
+        var myMap;
+
+        function init(){     
+            myMap = new ymaps.Map("map", {
+                center: [59.92606548, 30.32610869],
+                zoom: 11
+            });
+
+            myPlacemarkTov = new ymaps.Placemark([59.915038, 30.486096], {
+                 hintContent: 'Mr.Burger на Товарищеском', 
+                 balloonContent: 'Товарищеский проспект, 20/27'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-15, -50]
+            });
+
+            myPlacemarkTver = new ymaps.Placemark([59.94708381, 30.38481688], {
+                 hintContent: 'Mr.Burger на Тверской', 
+                 balloonContent: 'Тверская улица, 16'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-15, -50]
+            });
+
+            myPlacemarkMosk = new ymaps.Placemark([59.891295, 30.316907], {
+                 hintContent: 'Mr.Burger на Московском', 
+                 balloonContent: 'Московский проспект, 103к2'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-15, -50]
+            });
+
+            myPlacemarkChap = new ymaps.Placemark([59.973999, 30.311091], {
+                 hintContent: 'Mr.Burger на Чапыгина', 
+                 balloonContent: 'улица Чапыгина, 13А'
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageSize: [46, 57],
+                iconImageOffset: [-15, -50]
+            });  
+
+            myMap.geoObjects
+            .add(myPlacemarkTov)
+            .add(myPlacemarkTver)
+            .add(myPlacemarkMosk)
+            .add(myPlacemarkChap);
+
+            myMap.behaviors.disable('scrollZoom')
+        }
+
+    })
+
+    $(function() {
+        $("[data-fancybox]").fancybox({
+            smallBtn: false,
+            toolbar: false
+        });
+            
+        $('.popup__close').on('click', function(e) {
+            e.preventDefault();
+            $.fancybox.close()
+        })
+
+        $('.modal__btn').on('click', function(e) {
+            e.preventDefault();
+            $.fancybox.close()
+        })
+
+    })
+
+     function ScrollTo(sectionNumber) {
+        var target = $('.section').eq(sectionNumber).offset().top
+        $('html, body').animate({
+            scrollTop : target
+        }, 1000);
+    }
+
+    $(function() {
+        $('.main__arrow').on('click', function(e) {
+            e.preventDefault();
+            ScrollTo(1)
+        })
+    })
+
+    $(function() {
+        $('.header__btn').on('click', function(e) {
+            e.preventDefault();
+            ScrollTo(6)
+        })
+    })
+    
+
 })
+
+

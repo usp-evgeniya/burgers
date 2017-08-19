@@ -2,7 +2,6 @@
 //* Config *//
 @import "config/variables";
 @import "config/mixins";
-@import "config/media";
 
 
 //* Layout *//
@@ -27,6 +26,9 @@
 @import "components/strengths";
 @import "components/team";
 @import "components/map";
+@import "components/modal";
+@import "components/popup";
+
 
 
 
