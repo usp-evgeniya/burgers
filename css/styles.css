@@ -1391,7 +1391,7 @@ footer
   -ms-flex: 1;
   flex: 1;
   margin-left: 1.25rem;
-  min-width: 4.375rem; }
+  min-width: 5%; }
   @media screen and (max-width: 480px) {
     .form__item {
       margin-left: 0.625rem; } }
@@ -1411,7 +1411,8 @@ footer
   border-color: #d1cfcb;
   outline: none;
   cursor: pointer;
-  padding: 0.625rem; }
+  padding: 0.625rem;
+  max-width: 100%; }
   .form__input--textarea {
     resize: none;
     height: 7rem;

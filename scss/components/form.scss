@@ -41,7 +41,7 @@
     justify-content: flex-start;
     flex: 1;
     margin-left: rem(20px);
-    min-width: rem(70px);
+    min-width: 5%;
 
     @include phones {
         margin-left: rem(10px);
@@ -69,6 +69,7 @@
     outline: none;
     cursor: pointer;
     padding: rem(10px);
+    max-width: 100%;
 
     &--textarea {
         resize: none;
