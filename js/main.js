@@ -20,15 +20,22 @@ $(document).ready(function () {
         $('.team__member').on('click', function (e) {
             e.preventDefault();
             var elem = $(e.target),
-            active = elem.closest('.team__item');
-            /*result = elem.next('.team__details');*/
+            item = elem.closest('.team__item'),
+            content = item.find('.team__details-wrapper'),
+            openHeight = item.find('.team__details').outerHeight( true ),
+            otherItems = item.siblings(),
+            otherItemsContent = otherItems.find('.team__details-wrapper');
+            console.log(openHeight)
 
-                active.toggleClass('active');
-                /*result.slideToggle(500);*/
-                active.siblings().removeClass('active');
-                /*active.siblings().find('.team__details').slideUp(500);
-                */
-            
+            if (!item.hasClass('active')) {
+                otherItems.removeClass('active'),
+                item.addClass('active'),
+                otherItemsContent.css('height', '0'),
+                content.css('height', openHeight)
+            } else {
+                item.removeClass('active'),
+                content.css('height', '0')
+            }
         })
 
     })
