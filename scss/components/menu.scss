@@ -102,19 +102,17 @@
 
 }
 
-.menu__description {
+.menu__description-wrapper {
     background: rgba($dark-grey, 0.93);
     width: 0;
-    /*transition: width 0.5s;*/
+    transition: width 0.5s;
     overflow: hidden;
 }
 
-.active .menu__description{
-    /*width: 37rem;*/
-    width: 100%;
+.menu__description {
+    display: block;
     padding: rem(60px) rem(35px);
-    /*transition: width 0.5s;*/
-    
+
     & p {
         line-height: rem(24px);
         padding: 0;
@@ -124,4 +122,6 @@
         @include phones {
         padding: rem(15px) rem(15px);
     }
+
 }
+

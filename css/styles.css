@@ -1267,23 +1267,23 @@ footer
       text-align: left;
       width: 90vh; } }
 
-.menu__description {
+.menu__description-wrapper {
   background: rgba(47, 50, 52, 0.93);
   width: 0;
-  /*transition: width 0.5s;*/
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
   overflow: hidden; }
 
-.active .menu__description {
-  /*width: 37rem;*/
-  width: 100%;
-  padding: 3.75rem 2.1875rem;
-  /*transition: width 0.5s;*/ }
-  .active .menu__description p {
+.menu__description {
+  display: block;
+  padding: 3.75rem 2.1875rem; }
+  .menu__description p {
     line-height: 1.5rem;
     padding: 0;
     margin: 0; }
   @media screen and (max-width: 480px) {
-    .active .menu__description {
+    .menu__description {
       padding: 0.9375rem 0.9375rem; } }
 
 /*delivery*/

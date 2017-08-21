@@ -25,7 +25,6 @@ $(document).ready(function () {
             openHeight = item.find('.team__details').outerHeight( true ),
             otherItems = item.siblings(),
             otherItemsContent = otherItems.find('.team__details-wrapper');
-            console.log(openHeight)
 
             if (!item.hasClass('active')) {
                 otherItems.removeClass('active'),
@@ -44,13 +43,30 @@ $(document).ready(function () {
 
     $(function() {
         $('.menu__type-title').on('click', function (e) {
-          
+
+
             e.preventDefault();
             var elem = $(e.target),
-            active = elem.closest('.menu__item');
+            item = elem.closest('.menu__item'),
+            content = item.find('.menu__description-wrapper'),
+            otherItems = item.siblings(),
+            otherItemsContent = otherItems.find('.menu__description-wrapper'),
+            itemsWidth = $('.menu__item').length * $('.menu__type-cover').width();
 
-            active.toggleClass('active');
-            active.siblings().removeClass('active');
+            $(window).width() < 769 
+            ? openWidth = $(window).width() - itemsWidth 
+            : openWidth = $(window).width()*0.65 - itemsWidth
+            
+            if (!item.hasClass('active')) {
+                otherItems.removeClass('active'),
+                item.addClass('active'),
+                otherItemsContent.css('width', '0'),
+                content.css('width', openWidth)
+            } else {
+                item.removeClass('active'),
+                content.css('width', '0')
+            }
+
         })
     })
 
@@ -67,11 +83,6 @@ $(document).ready(function () {
         
         marker.toggleClass('bullets__item--active');
         marker.siblings().removeClass('bullets__item--active');
-
-        console.log(target);
-        console.log(marker);            
-
-
 
         /*
         $('html, body').animate({
