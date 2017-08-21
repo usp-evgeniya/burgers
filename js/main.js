@@ -104,7 +104,7 @@ $(document).ready(function () {
                  balloonContent: 'Товарищеский проспект, 20/27'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageHref: 'img/icon/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-15, -50]
             });
@@ -114,7 +114,7 @@ $(document).ready(function () {
                  balloonContent: 'Тверская улица, 16'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageHref: 'img/icon/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-15, -50]
             });
@@ -124,7 +124,7 @@ $(document).ready(function () {
                  balloonContent: 'Московский проспект, 103к2'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageHref: 'img/icon/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-15, -50]
             });
@@ -134,7 +134,7 @@ $(document).ready(function () {
                  balloonContent: 'улица Чапыгина, 13А'
             }, {
                 iconLayout: 'default#image',
-                iconImageHref: '/img/icon/map-marker.svg',
+                iconImageHref: 'img/icon/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-15, -50]
             });  
@@ -145,7 +145,11 @@ $(document).ready(function () {
             .add(myPlacemarkMosk)
             .add(myPlacemarkChap);
 
-            myMap.behaviors.disable('scrollZoom')
+            myMap.behaviors
+            .disable('scrollZoom')
+            .disable('drag')
+            
+
         }
 
     })
