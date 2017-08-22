@@ -62,7 +62,7 @@
     flex-direction: row;*/
     /*height: 0;
     transition: 0.5s;*/
-    overflow: hidden;
+    /*overflow: hidden;*/
 
     @include tablets {
         /*flex-direction: column;    
@@ -166,8 +166,8 @@
     }
 
     & .team__details-wrapper {
-        height: auto;
-        transition:  0.5s;
+        /*height: auto;
+        transition:  0.5s;*/
     }
 
     & .team__details {
@@ -178,11 +178,14 @@
         display: block;
 
         @include tablets {
-            margin-bottom: rem(15px);
+          padding-bottom: rem(15px);
         }
+
+
 
     }
 }
+
 
 .team__position {
     font-weight: bold;

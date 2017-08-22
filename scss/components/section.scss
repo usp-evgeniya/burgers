@@ -50,8 +50,8 @@
         }
 
         @include phones-small {
-            margin-top: rem(30px);
-            margin-bottom: rem(30px);
+            margin-top: rem(25px);
+            margin-bottom: rem(25px);
         }
     }
 
@@ -89,6 +89,11 @@
             margin-top: rem(55px);
             margin-bottom: rem(10px);
         }
+
+        @include phones-small {
+            margin-top: rem(40px);
+            margin-bottom: 0;
+        }
     }
 
     &--menu {
@@ -117,8 +122,8 @@
         }
 
         @include phones-small {
-            margin-top: rem(30px);
-            margin-left: rem(10px);
+            margin-top: rem(25px);
+            margin-bottom: rem(10px);
         }
     }
 

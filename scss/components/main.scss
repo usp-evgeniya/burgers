@@ -9,6 +9,7 @@ first section content
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
 }
 
 .main__content {
@@ -20,6 +21,12 @@ first section content
         flex-direction: column;
         margin-top: rem(80px);
     }
+
+    @include phones-small {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
 }
 
 .main__picture {
@@ -99,14 +106,16 @@ first section content
 
 
 .main__arrow {
+    position: absolute;
+    bottom: 10%;
     background-color: transparent;
-    margin-bottom: rem(55px);
+    /*margin-bottom: rem(55px);*/
     border: none;
     cursor: pointer;
-    margin-top: rem(50px);
+    /*margin-top: rem(50px);*/
 
     @include phones-small {
-        margin-top: rem(10px);
+        bottom: 5%;
     }
 }
 

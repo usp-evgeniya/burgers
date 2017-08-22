@@ -13,8 +13,6 @@ $(document).ready(function () {
     })
 
     /* team-accordeon */
-    /*Как теперь сделать, чтобы оно анимировалось - плавно открывалось и закрывалось?*/
-    /*Я специально оставила возможный вариант, который не сработал, кроме того slideToggle убивает flex*/
 
     $(function() {
         $('.team__member').on('click', function (e) {
@@ -70,28 +68,6 @@ $(document).ready(function () {
         })
     })
 
-    /*bullets*/
-
-    $(function(){
-            
-
-        $('.bullets__link').on('click', function (e) {
-       /* e.preventDefault();    */
-        var elem = $(e.target),
-        /*target = elem.attr('href'),*/
-        marker = elem.closest('.bullets__item');
-        
-        marker.toggleClass('bullets__item--active');
-        marker.siblings().removeClass('bullets__item--active');
-
-        /*
-        $('html, body').animate({
-            scrollTop : $('target').offset().top
-                
-        }, 1000);
-*/
-        })
-    })
 
     $(function(){
         $(".owl-carousel").owlCarousel({
@@ -190,28 +166,167 @@ $(document).ready(function () {
 
     })
 
-     function ScrollTo(sectionNumber) {
-        var target = $('.section').eq(sectionNumber).offset().top
-        $('html, body').animate({
-            scrollTop : target
-        }, 1000);
-    }
+
+
+    /*one-page-scroll*/
 
     $(function() {
+        var sections = $('.section'),
+            visible = $('.content'),
+            inScroll = false;
+
+            var md = new MobileDetect(window.navigator.userAgent),
+            isMobile = md.mobile();
+
+        var performTransition = function (sectionEq) {
+          
+            if(!inScroll) {
+                inScroll = true;
+
+                var sectionEq = sectionEq - 1; /*Index starts counting from 0, eq from 1*/
+                var position = (sectionEq * -100) + '%';
+                
+                visible.css({
+                    'transform' : 'translateY(' + position + ')',
+                    '-webkit-transform' : 'translateY(' + position + ')'
+                })
+    
+                sections.eq(sectionEq).addClass('active')
+                .siblings().removeClass('active');
+
+                setTimeout(function() {
+                    inScroll = false;
+                    $('.bullets__item').eq(sectionEq).addClass('active')
+                    .siblings().removeClass('active');
+                }, 300)
+
+            }
+                
+        }
+    
+        var defineSections = function(sections) {
+            var activeSection = sections.filter('.active');
+            return {
+                activeSection : activeSection,
+                nextSection : activeSection.next(),
+                prevSection : activeSection.prev()
+            }
+        }
+
+        var scrollToSection = function(direction) {
+            var section = defineSections(sections);
+            
+            if (direction == 'up' && section.nextSection.length) { /*вниз*/
+                
+                performTransition(section.nextSection.index());
+            } 
+            
+            if (direction == 'down' && section.prevSection.prev().length) { /*вверх*/   
+                performTransition(section.prevSection.index());
+            }
+
+        }
+
+
+
+        $('.wrapper').on({
+            'wheel': function(e) {
+                var deltaY = e.originalEvent.deltaY,
+                direction = "";
+
+                var direction = deltaY > 0 
+                ? direction = 'up'
+                : direction = 'down';
+
+                scrollToSection(direction);
+            },
+
+            touchmove: function(e) {
+                e.preventDefault();
+            }
+        })
+            
+
+        $(document).on('keydown', function (e) {
+            var section = defineSections(sections);
+            
+            
+            switch (e.keyCode) {
+                case 38: /*вверх*/
+                    if (section.prevSection.prev().length) {
+                        performTransition(section.prevSection.index());
+                    }
+                    break;
+                case 40: /*вниз*/
+                    if (section.nextSection.length) {
+                        performTransition(section.nextSection.index());
+                    }
+                    break;
+            }
+
+
+        })
+
+        /*bullets*/
+
+        
+            
+
+        $('.bullets__link').on('click', function (e) {
+        
+            e.preventDefault();
+
+            var elem = $(e.target),
+            bullets = $('.bullets__item'),
+            bulletTarget = elem.closest(bullets),            
+            bulletEq = bulletTarget.index();
+
+            performTransition(bulletEq + 1); /*Index starts counting from 0, eq from 1*/ 
+
+        })
+
+        $('.header__link').on('click', function (e) {
+            
+            e.preventDefault();
+
+            var elem = $(e.target),
+            elemId = elem.attr('href'),
+            sectionEq = parseInt(sections.filter(elemId).index());
+            performTransition(sectionEq);  
+            
+        })
+        
+        /* move to section */
+
         $('.main__arrow').on('click', function(e) {
             e.preventDefault();
-            ScrollTo(1)
-        })
+            performTransition(2);
+        });
+
+        $('.header__btn, .burgers__btn').on('click', function(e) {
+            e.preventDefault();
+            performTransition(7); /*Index starts counting from 0, eq from 1. First link is second screen*/ 
+
+        });
+
+        if (isMobile) {
+            $(window).swipe({
+                swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+                    scrollToSection(direction);
+                }
+            });            
+        }
+        
     })
 
-    $(function() {
-        $('.header__btn').on('click', function(e) {
-            e.preventDefault();
-            ScrollTo(6)
-        })
+
+    $(function (e) {
+
+
     })
-    
+
 
 })
+
 
 
