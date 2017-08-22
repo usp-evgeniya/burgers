@@ -158,7 +158,8 @@ header
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 100%; }
+  width: 100%;
+  z-index: 200; }
   .header__content {
     display: -webkit-box;
     display: -webkit-flex;
@@ -366,8 +367,8 @@ header
         margin-bottom: 3.4375rem; } }
     @media screen and (max-width: 400px) {
       .section__title--strengths {
-        margin-top: 1.5625rem;
-        margin-bottom: 1.5625rem; } }
+        margin-top: 1.875rem;
+        margin-bottom: 1.875rem; } }
   .section__title--burgers {
     line-height: 4rem;
     margin-bottom: 1.25rem; }
@@ -651,7 +652,7 @@ first section content
   -ms-flex-pack: center;
   justify-content: center;
   position: relative;
-  min-height: 100vh; }
+  height: 100vh; }
   @media screen and (max-width: 768px) {
     .burgers__content {
       -webkit-box-orient: vertical;
@@ -663,7 +664,8 @@ first section content
 .burgers__picture {
   width: 50%;
   position: relative;
-  min-height: 20.5625rem; }
+  min-height: 20.5625rem;
+  margin-right: 1.25rem; }
   @media screen and (max-width: 768px) {
     .burgers__picture {
       width: 100%;
@@ -982,11 +984,12 @@ first section content
   flex-wrap: wrap;
   -webkit-align-content: stretch;
   -ms-flex-line-pack: stretch;
-  align-content: stretch; }
+  align-content: stretch;
+  height: 100%; }
 
 .comments__item {
   overflow: hidden;
-  height: 50vh;
+  height: 50%;
   width: 25%;
   position: relative; }
   .comments__item:hover .comments__textblock {
@@ -1687,7 +1690,7 @@ footer
       max-width: 28.75rem; } }
   @media screen and (max-width: 400px) {
     .strengths__item {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.9375rem;
       -webkit-box-align: start;
       -webkit-align-items: flex-start;
       -ms-flex-align: start;
@@ -1741,6 +1744,9 @@ footer
   font-style: normal;
   font-size: 1.5rem;
   margin-bottom: 0.9375rem; }
+  @media screen and (max-width: 400px) {
+    .strengths__name {
+      margin-bottom: 0.3125rem; } }
 
 .strengths__text {
   line-height: 1.5rem; }
@@ -1748,8 +1754,7 @@ footer
 /* team */
 .team {
   background: url("../img/background/team.jpg") 50% 50% no-repeat;
-  background-size: cover;
-  min-height: 100vh; }
+  background-size: cover; }
 
 .team__wrapper {
   min-height: 100vh;
@@ -1955,7 +1960,7 @@ footer
 
 .map__interactive {
   width: 100%;
-  height: 100vh; }
+  height: 100%; }
 
 .modal {
   border-radius: 5px;

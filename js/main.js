@@ -68,6 +68,7 @@ $(document).ready(function () {
         })
     })
 
+    /*slider*/
 
     $(function(){
         $(".owl-carousel").owlCarousel({
@@ -159,10 +160,10 @@ $(document).ready(function () {
             $.fancybox.close()
         })
 
-        $('.modal__btn').on('click', function(e) {
+        /*$('.modal__btn').on('click', function(e) {
             e.preventDefault();
             $.fancybox.close()
-        })
+        })*/
 
     })
 

@@ -931,20 +931,20 @@
                         <h2 class="section__title section__title--delivery">
                             Закажите доставку
                         </h2>
-                        <form class="form" action="url" method="post">
+                        <form action="server.php" id="order-form" class="form" action="url" method="post">
                             <div class="form__part">
                                 <div class="form__row">
                                     <label class="form__item">
                                         <span class="form__caption">
                                             Имя
                                         </span>
-                                        <input type="text" class="form__input" required>
+                                        <input type="text" name="client-name" class="form__input" required>
                                     </label>
                                     <label class="form__item">
                                         <span class="form__caption">
                                             Телефон
                                         </span>
-                                        <input type="tel" class="form__input" required>
+                                        <input type="tel" name="client-phone" class="form__input" required>
                                     </label>
                                 </div>
                                 <div class="form__row">
@@ -952,7 +952,7 @@
                                         <span class="form__caption">
                                             Улица
                                         </span>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="address-street" class="form__input">
                                     </label>
                                 </div>
                                 <div class="form__row">
@@ -960,25 +960,25 @@
                                         <span class="form__caption">
                                             Дом
                                         </span>
-                                        <input type="number" class="form__input">
+                                        <input type="number" name="address-building" class="form__input">
                                     </label>
                                     <label class="form__item">
                                         <span class="form__caption">
                                             Корпус
                                         </span>
-                                        <input type="text" class="form__input">
+                                        <input type="text" name="address-site" class="form__input">
                                     </label>
                                     <label class="form__item">
                                         <span class="form__caption">
                                             Квартира
                                         </span>
-                                        <input type="number" class="form__input">
+                                        <input type="number" name="address-flat" class="form__input">
                                     </label>
                                     <label class="form__item form__item--floor">
                                         <span class="form__caption">
                                             Этаж
                                         </span>
-                                        <input type="number" class="form__input">
+                                        <input type="number" name="address-floor" class="form__input">
                                     </label>
                                 </div>
 
@@ -989,7 +989,7 @@
                                     <span class="form__caption">
                                         Комментарий
                                     </span>
-                                    <textarea type="text" class="form__input form__input--textarea"></textarea>
+                                    <textarea type="text" name="comment" class="form__input form__input--textarea"></textarea>
                                 </label>
                                 <div class="form__options">
                                     <label class="form__options-type">
@@ -1004,18 +1004,18 @@
                                     </label>
                                 </div>
                                 <label class="form__checkbox">
-                                    <input type="checkbox" name="payment" class="form__checkbox-visual" checked>
+                                    <input type="checkbox" name="callback" class="form__checkbox-visual" checked>
                                     <span class="form__checkbox-fake"></span>
                                     <span class="form__checkbox-name">Не перезванивать</span> 
                                 </label>
                                 <div class="form__btns">
-                                    <button type="submit" class="form__submit form__submit--order" data-fancybox data-src="#modal">Заказать</button>
+                                    <button type="submit" class="form__submit form__submit--order" >Заказать</button>
                                     <button type="reset" class="form__submit form__submit--clear">Очистить</button>
                                 </div>
                             </div>  
                         </form>
 
-                        <div class="modal" id="modal">
+                        <div class="modal">
                             <div class="modal__text">
                                 Сообщение отправлено
                             </div>

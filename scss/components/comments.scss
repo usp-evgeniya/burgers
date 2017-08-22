@@ -11,11 +11,12 @@
     align-items: center;
     flex-wrap: wrap;
     align-content: stretch;
+    height: 100%;
 }
 
 .comments__item {
     overflow: hidden;
-    height: 50vh;
+    height: 50%;
     width: 25%;
     position: relative;
     

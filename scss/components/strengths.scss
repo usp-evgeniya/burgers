@@ -43,7 +43,7 @@
     }
 
     @include phones-small {
-        margin-bottom: rem(20px);
+        margin-bottom: rem(15px);
         align-items: flex-start;
     }
 }
@@ -89,6 +89,10 @@
     @include lifehack;
     font-size: rem(24px);
     margin-bottom: rem(15px);
+
+    @include phones-small {
+        margin-bottom: rem(5px);
+    }
 }
 
 .strengths__text {

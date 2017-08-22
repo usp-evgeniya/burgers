@@ -20,7 +20,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    min-height: 100vh;
+    height: 100vh;
 
     @include tablets {
         flex-direction: column;
@@ -32,6 +32,7 @@
     width: 50%;
     position: relative;
     min-height: rem(329px);
+    margin-right: rem(20px);
 
     @include tablets {
         width: 100%;
