@@ -183,6 +183,10 @@ header
     .header__logo {
       z-index: 400; } }
 
+.header__logo-img {
+  max-width: 100%;
+  max-height: 100%; }
+
 .header__nav {
   margin-right: 0.9375rem; }
   @media screen and (max-width: 768px) {

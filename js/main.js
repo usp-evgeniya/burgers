@@ -86,64 +86,56 @@ $(document).ready(function () {
     $(function(){
 
         ymaps.ready(init);
-        var myMap;
-
+        var myMap,
+        myPlacemark,
+        myPlacemarks = [{
+            latitude: 59.915038,
+            longitude: 30.486096,
+            hintContent: 'Mr.Burger на Товарищеском', 
+            balloonContent: 'Товарищеский проспект, 20/27'
+        },
+        {
+            latitude: 59.94708381,
+            longitude: 30.38481688,
+            hintContent: 'Mr.Burger на Тверской', 
+            balloonContent: 'Тверская улица, 16'
+        },
+        {
+            latitude: 59.891295,
+            longitude: 30.316907,
+            hintContent: 'Mr.Burger на Московском', 
+            balloonContent: 'Московский проспект, 103к2'
+        },
+        {
+            latitude: 59.973999,
+            longitude: 30.311091,
+            hintContent: 'Mr.Burger на Чапыгина', 
+            balloonContent: 'улица Чапыгина, 13А'
+        }];
+        
         function init(){     
             myMap = new ymaps.Map("map", {
                 center: [59.92606548, 30.32610869],
                 zoom: 11
             });
 
-            myPlacemarkTov = new ymaps.Placemark([59.915038, 30.486096], {
-                 hintContent: 'Mr.Burger на Товарищеском', 
-                 balloonContent: 'Товарищеский проспект, 20/27'
+            myPlacemarks.forEach(function(obj) {
+                myPlacemark = new ymaps.Placemark([obj.latitude, obj.longitude], { 
+                hintContent: obj.hintContent, 
+                hintContent: obj.balloonContent
             }, {
                 iconLayout: 'default#image',
                 iconImageHref: 'img/icon/map-marker.svg',
                 iconImageSize: [46, 57],
                 iconImageOffset: [-15, -50]
+                });
+    
+                myMap.geoObjects.add(myPlacemark);
             });
-
-            myPlacemarkTver = new ymaps.Placemark([59.94708381, 30.38481688], {
-                 hintContent: 'Mr.Burger на Тверской', 
-                 balloonContent: 'Тверская улица, 16'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/icon/map-marker.svg',
-                iconImageSize: [46, 57],
-                iconImageOffset: [-15, -50]
-            });
-
-            myPlacemarkMosk = new ymaps.Placemark([59.891295, 30.316907], {
-                 hintContent: 'Mr.Burger на Московском', 
-                 balloonContent: 'Московский проспект, 103к2'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/icon/map-marker.svg',
-                iconImageSize: [46, 57],
-                iconImageOffset: [-15, -50]
-            });
-
-            myPlacemarkChap = new ymaps.Placemark([59.973999, 30.311091], {
-                 hintContent: 'Mr.Burger на Чапыгина', 
-                 balloonContent: 'улица Чапыгина, 13А'
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: 'img/icon/map-marker.svg',
-                iconImageSize: [46, 57],
-                iconImageOffset: [-15, -50]
-            });  
-
-            myMap.geoObjects
-            .add(myPlacemarkTov)
-            .add(myPlacemarkTver)
-            .add(myPlacemarkMosk)
-            .add(myPlacemarkChap);
-
+            
             myMap.behaviors
             .disable('scrollZoom')
             .disable('drag')
-            
 
         }
 
