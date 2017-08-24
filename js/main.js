@@ -320,13 +320,18 @@ $(document).ready(function () {
         
     })
 
+/*
+    $(function () {
+        var submitForm = function (e) {
+            e.preventDefault();
+            console.log('yes');
 
-    $(function (e) {
+        }
 
-
+        $('#order-form').on('submit', submitForm);
+        
     })
-
-
+*/
 })
 
 

@@ -998,7 +998,7 @@ first section content
   @media screen and (max-width: 768px) {
     .comments__item {
       width: 50%;
-      height: 25vh; } }
+      height: 25%; } }
 
 .comments__photo {
   position: absolute;
