@@ -20,5 +20,10 @@
         @extend %btn;
         background-color: $red;
     }
+
+    &.active {
+        position: absolute;
+        display: block;
+    }
 }
 

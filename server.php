@@ -43,9 +43,13 @@
     $mail = mail("usp-evgeniya@yandex.ru", "Заказ", $mail_message, $headers);
 
     if ($mail) {
-        echo 'done';
+        $data['status'] = "OK";
+        $data['mes'] = "Письмо успешно отправлено";
     }else{
-        echo 'error';
+        $data['status'] = "ERROR";
+        $data['mes'] = "На сервере произошла ошибка";
     }
+
+    echo json_encode($data);
 
 ?>

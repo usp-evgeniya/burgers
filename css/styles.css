@@ -1984,6 +1984,9 @@ footer
   .modal__btn {
     display: inline-block;
     background-color: #e45028; }
+  .modal.active {
+    position: absolute;
+    display: block; }
 
 .popup {
   display: none; }
