@@ -19,7 +19,7 @@ first section content
     
     @include tablets {
         flex-direction: column;
-        margin-top: rem(80px);
+        margin-top: 0;
     }
 
     @include phones-small {
@@ -42,7 +42,7 @@ first section content
 
     @include phones {
         min-height: rem(343px);
-        margin-top: rem(30px);
+        margin-top: rem(0px);
     }
 
     @include phones-small {
@@ -109,12 +109,10 @@ first section content
     position: absolute;
     bottom: 10%;
     background-color: transparent;
-    /*margin-bottom: rem(55px);*/
     border: none;
     cursor: pointer;
-    /*margin-top: rem(50px);*/
 
-    @include phones-small {
+    @include phones {
         bottom: 5%;
     }
 }
