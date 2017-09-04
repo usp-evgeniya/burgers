@@ -62,7 +62,6 @@
 
 }
 
-
 .burgers__textblock {
     width: 50%;
 
@@ -175,29 +174,3 @@
     
 }
 
-/*
-
-.burgers__control {
-    background: url('../img/icon/arrow-scroll.svg') 50% 50% no-repeat;
-    background-size: contain;
-    width: rem(29px);
-    height: rem(14px);
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    z-index: 300;
-
-    &--back {
-        left: 3%;
-        top: 49%;
-        transform: translate(0%,-50%) rotate(90deg);
-    }
-
-    &--next {
-        right: 3%;
-        top: 49%;
-        transform: translate(0%,-50%) rotate(-90deg);
-    }
-}
-
-*/
